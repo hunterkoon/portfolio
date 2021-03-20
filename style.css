@@ -6,8 +6,8 @@ body {
   background-position: 10%;
   background-position-x: 700px;
   background-size: 100%;
-  height: 2000px;
 }
+/* HOME */
 .menu {
   padding-top: 15px;
   margin: 0;
@@ -30,21 +30,17 @@ body {
   padding-inline: 10px;
   color: #6c68ac;
 }
-
 .main_menu {
   margin: 0px;
   margin-left: 150px;
 }
-
 .home_page {
   padding-top: 0%;
   margin: 0;
 }
-
 a:hover {
   text-decoration: underline;
 }
-
 .presentation {
   margin: 0;
 }
@@ -54,12 +50,17 @@ a:hover {
   width: 30px;
   margin-left: 50%;
 }
-
 .me_photo {
   padding-top: 15px;
   margin-left: 75px;
   position: absolute;
   width: 65%;
+}
+.my_text h1 p {
+  z-index: 1;
+}
+.my_text a {
+  z-index: 1;
 }
 .my_text {
   font-size: 18pt;
@@ -68,25 +69,103 @@ a:hover {
   margin-left: 40%;
   position: relative;
 }
-
 .short_description {
   color: #6c68ac;
-  padding-top: 45px;
+  padding-top: 3px;
   margin-left: 200px;
   font-size: 12pt;
 }
-.contate a{
-
+.contate {
   position: absolute;
   text-decoration: none;
+  padding-left: 300px;
   font-size: 18pt;
-    margin-left: 85%;
-    margin-top: -25%;
-    color: #6c68ac;
+  margin-top: -160px;
+  color: #6c68ac;
+  z-index: 1;
+}
+.contate a:hover {
+  text-decoration: 1px underline;
+}
+.line {
+  margin-top: 1%;
+  margin-left: 85%;
+  height: 210px;
+  border-right: #6c68ac solid 1px;
+  display: flex;
+  position: absolute;
+}
+.line_2 {
+  margin-top: 22%;
+  margin-left: 85%;
+  height: 190px;
+  border-right: #6c68ac solid 1px;
+  display: flex;
+  position: absolute;
 }
 
-.line{
-  display: block;
+
+.icons_social_media {
+  margin-left: 80%;
+
+}
+.icon_2_git {
+
+  width: 35px;
+  padding-right: 5px;
+}
+
+.icon_2_linkedin {
+
+  width: 35px;
+  padding-right: 5px;
+}
+.icon_2_behance {
+
+  width: 55px;
+}
+
+/* BIO */
+
+.bio {
+  margin-left: 120px;
+  margin-top: 10%;
+  margin-bottom: 25%;
+}
+.bio p {
+  font-size: 25pt;
+  color: #6c68ac;
+}
+/* FOOTER */
+
+footer {
+  margin-bottom: 0 auto;
+  background-color: #e6e7e7;
+  height: 0 auto;
+  font-size: 14pt;
+}
+footer a {
+  font-size: 12pt;
+  text-decoration: none;
+  color: #6c68ac;
   position: relative;
-  border: 4px black;
+  padding-top: 5px;
+}
+.icon_2 {
+  padding-left: 15px;
+  padding-right: 15px;
+  position: relative;
+  width: 30px;
+}
+.footer_div_1 {
+  margin-left: 10%;
+  display: flex;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.footer_main {
+  margin-left: 22%;
+  align-self: center;
+  align-content: center;
+  align-items: center;
 }
