@@ -1,0 +1,18 @@
+@keyframes icone {
+  from {
+    
+    top: 0px;
+  }
+  to {
+   
+    top: 20px;
+  }
+}
+
+.icon_1 {
+  position: relative;
+  animation-name: icone;
+  animation-duration: 0.8s;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+}
