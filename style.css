@@ -1,7 +1,8 @@
 html,
 body {
+  height: 100%;
   margin: 0;
-  background-image: url("bg/SVG/Asset\ 2.svg");
+  background-image: url("bg/SVG/background.svg");
   background-repeat: no-repeat;
   background-position: 10%;
   background-position-x: 700px;
@@ -43,6 +44,7 @@ a:hover {
 }
 .presentation {
   margin: 0;
+  scroll-snap-type: y proximity;
 }
 .icon_1 {
   padding-top: 15px;
@@ -104,37 +106,84 @@ a:hover {
   position: absolute;
 }
 
-
 .icons_social_media {
   margin-left: 80%;
-
 }
 .icon_2_git {
-
   width: 35px;
   padding-right: 5px;
 }
 
 .icon_2_linkedin {
-
   width: 35px;
   padding-right: 5px;
 }
 .icon_2_behance {
-
   width: 55px;
 }
 
 /* BIO */
 
-.bio {
-  margin-left: 120px;
-  margin-top: 10%;
-  margin-bottom: 25%;
-}
 .bio p {
+  padding-right: 2%;
+  color: #6c68ac;
+  font-size: 14pt;
+  text-align: justify;
+  overflow: auto;
+  height: 500px;
+  width: 1700px;
+}
+.bio {
+  position: relative;
+  scroll-snap-type: y proximity;
+  margin-left: 120px;
+  margin-top: 6%;
+  margin-bottom: 10%;
+}
+.bio h1 {
   font-size: 25pt;
   color: #6c68ac;
+}
+.photos_bio{
+  margin-top: -60px;
+  margin-left: 10%;
+}
+.description_about_me{
+  
+  display: flex;
+}
+.photos_bio img{
+    width: 55%;
+}
+.photo_1{
+  z-index: 1;
+}
+.photo_2{
+  padding-left: 100px;
+  margin-top: -10%;  
+  z-index: 0;
+  position: relative;
+}
+.photo_3{
+  position: relative;
+  z-index: 1;
+  width: 30%;
+  margin-top: -15%;
+}
+/* BIO SCROLL*/
+
+.bio ::-webkit-scrollbar-track {
+  background-color: #b4a6d1;
+}
+.bio ::-webkit-scrollbar {
+  height: 100px;
+  width: 8px;
+  background: #6c68ac;
+}
+.bio ::-webkit-scrollbar-thumb {
+  width: 50%;
+  border-radius: 25px;
+  background: #6c68ac;
 }
 /* FOOTER */
 
