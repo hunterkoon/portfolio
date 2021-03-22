@@ -42,21 +42,26 @@ body {
 a:hover {
   text-decoration: underline;
 }
-.presentation {
-  margin: 0;
-  scroll-snap-type: y proximity;
-}
+
 .icon_1 {
   padding-top: 15px;
   position: absolute;
   width: 30px;
   margin-left: 50%;
 }
-.me_photo {
+/* 
+<!-- APRESENTAÇÃO --> */
+
+.presentation {
+  display: flex;
+}
+.my_photo {
   padding-top: 15px;
   margin-left: 75px;
-  position: absolute;
   width: 65%;
+}
+.my_photo_div{
+  position: absolute;
 }
 .my_text h1 p {
   z-index: 1;
@@ -65,48 +70,52 @@ a:hover {
   z-index: 1;
 }
 .my_text {
-  font-size: 18pt;
+  z-index: 1;
+  font-size: 150%;
   color: #e6e7e7;
   padding-top: 110px;
   margin-left: 40%;
   position: relative;
 }
 .short_description {
+
   color: #6c68ac;
-  padding-top: 3px;
+  padding-top: 3%;
   margin-left: 200px;
-  font-size: 12pt;
+  font-size: 110%;
 }
 .contate {
+  width: 150px;
   position: absolute;
   text-decoration: none;
-  padding-left: 300px;
+  padding-left: 88%;
   font-size: 18pt;
-  margin-top: -160px;
-  color: #6c68ac;
-  z-index: 1;
+  color: rgb(108, 104, 172);
+  margin-top: -55%;
 }
 .contate a:hover {
   text-decoration: 1px underline;
 }
+
 .line {
-  margin-top: 1%;
-  margin-left: 85%;
-  height: 210px;
-  border-right: #6c68ac solid 1px;
-  display: flex;
+  margin-left: 83%;
+  margin-top:1% ;
+  border-left: solid #6c68ac 1px;
   position: absolute;
+  display: block;
+  height: 210px;
 }
 .line_2 {
-  margin-top: 22%;
-  margin-left: 85%;
-  height: 190px;
-  border-right: #6c68ac solid 1px;
-  display: flex;
+  margin-left: 83%;
+  margin-top:23% ;
+  border-left: solid #6c68ac 1px;
   position: absolute;
+  display: block;
+  height: 220px;  
 }
 
 .icons_social_media {
+  margin-top: -4%;
   margin-left: 80%;
 }
 .icon_2_git {
@@ -121,10 +130,13 @@ a:hover {
 .icon_2_behance {
   width: 55px;
 }
+/* 
+<!-- APRESENTAÇÃO FIM --> */
 
 /* BIO */
 
 .bio p {
+  line-height: 1.6;
   padding-right: 2%;
   color: #6c68ac;
   font-size: 14pt;
@@ -145,7 +157,7 @@ a:hover {
   color: #6c68ac;
 }
 .photos_bio{
-  margin-top: -60px;
+  margin-top: -40px;
   margin-left: 10%;
 }
 .description_about_me{
@@ -217,4 +229,13 @@ footer a {
   align-self: center;
   align-content: center;
   align-items: center;
+}
+.wip{
+  color: red;
+  margin-left: 40%;
+  font-size: larger;
+}
+
+.wip p{
+  margin-left: -10%;
 }
