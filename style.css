@@ -246,6 +246,7 @@ a:hover {
 }
 
 .experience {
+  align-items: center;
   display: flex;
   justify-content: center;
 }
@@ -277,6 +278,8 @@ width: 100%;
 }
 
 .empresas_list_section section li {
+  font-size: 3vw;
+  font-weight: bold;
   text-align: end;
   padding-right: 2vw;
 }
@@ -305,7 +308,13 @@ width: 100%;
   margin-top: 6%;
   /* margin: 6vw; */
 }
-
+.empresas_list_section{
+  width: 30vw;
+}
+.text_box h1 {
+  font-size: 3vw;
+  font-weight: bold;
+}
 
 
 /* EXP SCROLL*/
