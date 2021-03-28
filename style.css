@@ -328,6 +328,9 @@ width: 100%;
   width: 0.8vw;
   background: #6c68ac;
 }
+.empresas_list_section li {
+  transform: rotate();
+}
 .bg_exp_section ::-webkit-scrollbar-thumb {
   width: 50%;
   border-radius: 1.5vw;
