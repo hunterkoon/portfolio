@@ -2,25 +2,18 @@
         
     
             
-            let image = document.getElementsByName('imagem');  
-            const classRotate = document.getElementsByClassName('section_rotate');
-
-            for (let i = 0 ; i < image.length ; i++){        
-
-                classRotate[i].addEventListener('click',
-                function(e){
-                    recolher ()
-                    if(image[i].style.transform != 'rotate(90deg)'){
-                        image[i].style.transform = 'rotate(90deg)';
-            
-            } else {
-                        image[i].style.transform = 'rotate(0deg)';
-
-                }
-                }
-                )
-
+let image = document.getElementsByName('imagem');  
+const classRotate = document.getElementsByClassName('section_rotate');
+   for (let i = 0 ; i < image.length ; i++){        
+       classRotate[i].addEventListener('click',function(){
+           if(image[i].style.transform != 'rotate(90deg)'){
+               image[i].style.transform = 'rotate(90deg)';
+           } else {
+               image[i].style.transform = 'rotate(0deg)';
             }
+        }// FUNÇÃO FIM
+    )
+}
 
   
 
@@ -39,13 +32,16 @@ function recolher () {
     console.log(sequeCheck[i]); 
     }
 
+
+
 } 
 
 
 
  function showText(event) {
+       
     const section = event.querySelectorAll('section');
-
+        recolher ()
         if(section[1].style.display === 'none') {
 
     section[1].style.display ='block';
