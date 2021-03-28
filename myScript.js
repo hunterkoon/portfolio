@@ -1,7 +1,4 @@
-
-        
-    
-            
+           
 let image = document.getElementsByName('imagem');  
 const classRotate = document.getElementsByClassName('section_rotate');
    for (let i = 0 ; i < image.length ; i++){        
@@ -11,13 +8,10 @@ const classRotate = document.getElementsByClassName('section_rotate');
            } else {
                image[i].style.transform = 'rotate(0deg)';
             }
-        }// FUNÇÃO FIM
+        } // FUNÇÃO FIM
     )
 }
-
-  
-
-
+// RECOLHE TEXTOS EXIBIDOS
 function recolher () {
     
     var listseq = document.querySelectorAll('section');
@@ -31,12 +25,8 @@ function recolher () {
     }   
     console.log(sequeCheck[i]); 
     }
-
-
-
 } 
-
-
+// MOSTRA TEXTOS SELECIONADOS
 
  function showText(event) {
        
@@ -58,8 +48,6 @@ function recolher () {
     duration: 300,
     iterations: 1,
   });
-
-
 
 }
 
