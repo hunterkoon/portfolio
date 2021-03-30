@@ -280,15 +280,16 @@
                 <ul>
                     <section class="empresas_list_section" name='section_names'>
                         <!-- CHEIL /-->
-                        <div class="exp_cheil">
+                        <div class="exp_cheil" name ='divClick'>
                             <span style="text-decoration: none;" onclick="showText(this)" class='section_rotate'>
                                 <section>
                                     <li>Cheil Brasil.</li>
-                                    <img class="icon_4" src="bg/SVG/0icon_4.svg" name='imagem' alt="icone4">
+                                    <img class="icon_4" src="bg/SVG/0icon_4.svg" name='imagem' alt="icone4"
+                                        style="transform:rotate(90deg);">
 
                                 </section>
 
-                                <section class="text_cheil" style="display: block;">
+                                <section class="text_cheil" style="display: block;" name = 'section_text'>
 
                                     <p>
                                         A Cheil Worldwide Inc. é uma empresa de marketing do Samsung Group que oferece
@@ -301,14 +302,14 @@
                             </span>
                         </div>
                         <!-- DEMATEC /-->
-                        <div class="exp_dematec">
+                        <div class="exp_dematec" name ='divClick'>
                             <span style="text-decoration: none;" onclick="showText(this)" class='section_rotate'>
                                 <section>
-                                    <li>Dematec Ind.</li>
+                                    <li> <b> Dematec Ind.</b> </li>
                                     <img class="icon_4" src="bg/SVG/0icon_4.svg" name='imagem' alt="icone4">
 
                                 </section>
-                                <section class="text_dematec" style="display: none;">
+                                <section class="text_dematec" style="display: none;" name = 'section_text'>
                                     <p>
                                         A Dematec classifica-se como uma das maiores fábricas de mobiliário corporativo
                                         do Brasil. Localizada em Boituva à 122 km de São Paulo conta com um parque
@@ -322,14 +323,14 @@
                             </span>
                         </div>
                         <!-- WV DESIGN /-->
-                        <div class="exp_wv">
+                        <div class="exp_wv" name ='divClick'>
                             <span onclick="showText(this)" style="text-decoration: none;" class='section_rotate'>
                                 <section>
                                     <li>WV Design Ind.</li>
                                     <img class="icon_4" src="bg/SVG/0icon_4.svg" name='imagem' alt="icone4">
 
                                 </section>
-                                <section class="text_wv" style="display: none;">
+                                <section class="text_wv" style="display: none;" name = 'section_text'>
                                     <p>
                                         A fábrica e estúdio de design estão sediados em São Paulo numa área de 8.000 m²,
                                         onde fornecem produtos e projetos com design autoral assinados pelo Studio WV,
@@ -338,20 +339,20 @@
                                         diversos tipos de matérias-primas...
                                         <a href="https://www.wvdesign.com.br/quem-somos">site da empresa</a>
                                     </p>
-                                    
+
                                 </section>
                             </span>
                         </div>
                         <!-- DIGITAL /-->
-                        <div class="exp_digital">
+                        <div class="exp_digital" name ='divClick'>
                             <span onclick="showText(this)" style="text-decoration: none;" class='section_rotate'>
-                                
+
                                 <section>
                                     <li>Digital Light.</li>
                                     <img class="icon_4" src="bg/SVG/0icon_4.svg" alt="icone4" name='imagem'>
-                                    
+
                                 </section>
-                                <section class="text_digital" style="display: none;">
+                                <section class="text_digital" style="display: none;" name = 'section_text'>
                                     <p>
                                         A Digital Light é um estúdio de criação digital especializado em filmes,
                                         renderizações e conteúdo interativo para o Mercado Imobiliário e Arquitetura. A
@@ -359,7 +360,7 @@
                                         como EUA, Brasil, Turquia...
                                         <a href="https://www.digitallight.com.br">site da empresa</a>
                                     </p>
-                                    
+
                                 </section>
                             </span>
                         </div>
@@ -372,69 +373,88 @@
                 <!-- DESCRIÇÃO DOS AFAZERES /-->
                 <section class="bg_exp_section">
 
-                    <section class="exp_text_section">
+                    <section class="exp_text_section"
+                        style="display: flex; position: relative; align-self: center; justify-content: center; padding-right: 10vw;">
+                        <img style="width: 3vw; opacity: 25%; transform: rotate(180deg); padding-inline: 3vw;"
+                            src="bg/SVG/seta-direita.svg" alt="">
                         <h1> Selecione uma empresa ao lado!! </h1>
                     </section>
 
                     <div class="text_box">
 
                         <!-- CHEIL /-->
-                        <section class="exp_cheil_section" style="display: block;">
-                            <h1> Cheil. </h1>
-                            <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                                incididunt
-                                ut
-                                labore et dolore magna aliqua. Blandit aliquam etiam erat velit scelerisque in dictum
-                                non
-                                consectetur. Laoreet id donec ultrices tincidunt arcu non sodales. Eget nunc scelerisque
-                                viverra
-                                mauris in aliquam sem fringilla ut.
+                        <section class="exp_cheil_section" style="display: block;" name ='textBoxHide'>
+                            <h1> Cheil Brasil. </h1>
+                            <p>
+                                <b>Designer 3D</b> - mar. de 2018 – fev. de 2021 - 3 anos - São Paulo, Brasil <br><br>
+
+                                Durante o período em que exerci o cargo de Designer 3D, minhas atividades estavam
+                                voltadas a atender as demandas internas e externas, participávamos de concorrências para
+                                lançamentos de novos produtos no mercado brasileiro, criação e execução de conceitos
+                                para, stores, centros de assistência, vitrines, displays e mais, criação de experiências
+                                para usuário, elaboração de workflows dentro de espaços, elaboração de projetos
+                                conceitos de flagships. Juntamente com a implementação de tecnologia ao ponto de venda,
+                                trazer informação e análise de dados para as mãos dos gerenciadores de redes e hipers,
+                                trabalhando em integração com vários setores da empresa, uma agencia que se propunha a
+                                ser 360º.
+
                             </p>
 
                         </section>
                         <!-- DEMATEC /-->
-                        <section class="exp_dematec_section" style="display: none;">
+                        <section class="exp_dematec_section" style="display: none;" name ='textBoxHide'>
 
                             <h1> Dematec Ind. </h1>
-                            <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                                incididunt
-                                ut
-                                labore et dolore magna aliqua. Blandit aliquam etiam erat velit scelerisque in dictum
-                                non
-                                consectetur. Laoreet id donec ultrices tincidunt arcu non sodales. Eget nunc scelerisque
-                                viverra
-                                mauris in aliquam sem fringilla ut.
+                            <p>
+                                <b>Designer 3D PL</b> - mar. de 2013 – jan. de 2018 - 4 anos - Boituva, Brasil <br><br>
+                                Ocupei o cargo de Designer na empresa Dematec LTDA. , fabricante de mobiliário
+                                corporativo , durante o período de 2013 - 2018 desenvolvi atividades relacionadas a área
+                                de Marketing. Destacam-se neste período realizações como agregamento de valor à marca,
+                                aumento concreto de vendas e melhor posicionamento de mercado. Vale ressaltar também
+                                alguns feitos como: Revitalização do Showroom, que estava localizado na AV.
+                                Pacaembu,1280, São Paulo – SP, cujo o projeto conceito era de minha autoria; Criação de
+                                manual de identidade visual, Criação de Lista unificada de preço, Criação de conteúdo
+                                Omnichannel para divulgação, além disso para os projetos de maior significância
+                                desenvolvi conteúdos em 3D e Layouts. A partir do ano de 2016 até o primeiro semestre de
+                                2018 mudei-me para Boituva, cidade localizada no interior de São Paulo, onde encontra-se
+                                a Sede da empresa, neste período estive mais focado no desenvolvimento de novas linhas
+                                de produtos e passei a trabalhar juntamente ao setor de Engenharia e desenvolvimento,
+                                criando algumas linhas de produtos que viriam a se tornar campeã de vendas no ano
+                                seguinte. Para além disso, estive envolvido com a implementação de um novo sistema (ERP
+                                – Promob), o qual estendia-se desde o recebimento de matéria prima à entrega final,
+                                acompanhei e supervisionei a implementação do sistema de orçamentos na área de vendas
+                                que facilitou e unificou toda geração de propostas, diminuindo a incidência de erros
+                                ocasionadas por desencontro de informações.
+
                             </p>
 
                         </section>
                         <!-- WV DESIGN /-->
-                        <section class="exp_WV_section" style="display: none;">
+                        <section class="exp_WV_section" style="display: none;" name ='textBoxHide'>
 
                             <h1> WV Design Ind. </h1>
-                            <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                                incididunt
-                                ut
-                                labore et dolore magna aliqua. Blandit aliquam etiam erat velit scelerisque in dictum
-                                non
-                                consectetur. Laoreet id donec ultrices tincidunt arcu non sodales. Eget nunc scelerisque
-                                viverra
-                                mauris in aliquam sem fringilla ut.
+                            <p>
+                                <b>Designer 3D PL</b> - mar. de 2011 – jan. de 2013 - 2 anos - São Paulo, Brasil <br><br>
+                                Desenvolvimento de novas linhas baseada na evolução de conceitos internacionais do
+                                setor, Uso da ferramenta 3DS – MAX –V-RAY para ilustração dos produtos, Visita à cliente
+                                (lojas, residências). Elaboração de Projetos em CAD dos produtos. Acompanhamento da
+                                produção em Fábrica. Conhecimento em Marcenaria. CORTE, DOBRA, COLAGEM DE FOLHAS DE
+                                ACABAMENTO, BORDAS, LAQUEAMENTO AVANÇADO, (todo o processo de produção desde o
+                                desenvolvimento à finalização).
+                                Trabalhei ao lado do Designer espanhol Victor Angueira. Onde pude aprender e desenvolver
+                                senso crítico sobre design em geral, período onde pude aprender muitas coisas em um
+                                espaço de tempo curto
                             </p>
 
                         </section>
                         <!-- DIGITAL /-->
-                        <section class="exp_WV_section" style="display: none;">
+                        <section class="exp_WV_section" style="display: none;" name ='textBoxHide'>
 
                             <h1> Digital Light </h1>
 
-                            <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                                incididunt
-                                ut
-                                labore et dolore magna aliqua. Blandit aliquam etiam erat velit scelerisque in dictum
-                                non
-                                consectetur. Laoreet id donec ultrices tincidunt arcu non sodales. Eget nunc scelerisque
-                                viverra
-                                mauris in aliquam sem fringilla ut.
+                            <p>
+                                <b>Designer 3D PL</b> - fev. de 2018 – mar. de 2018 - 2 mêses - São Paulo, Brasil <br>
+
                             </p>
 
                         </section>

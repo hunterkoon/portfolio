@@ -185,10 +185,10 @@ a:hover {
 }
 .photos {
   margin-top: -6vw;
-  width: 50%;
+  width: 40%;
 }
 .photos img {
-  width: 400px;
+  width: 338px;
   display: block;
 }
 .photo_2 {
@@ -200,10 +200,10 @@ a:hover {
   margin-top: -60px;
 }
 .description_about_me p {
-  line-height: 2vw;
   padding-right: 2%;
   color: #6c68ac;
-  font-size: 14pt;
+  line-height: 2rem;
+  font-size: 1.3rem;
   text-align: justify;
   overflow: auto;
   height: 500px;
@@ -246,7 +246,7 @@ a:hover {
 }
 
 .experience {
-  align-items: center;
+  align-items: flex-end;
   display: flex;
   justify-content: center;
 }
@@ -287,8 +287,7 @@ width: 100%;
   font-size: 3vw;
   padding-top: 2vw;
   padding-bottom: 1vw;
-  margin-right: 25vw;
-  text-align: end;
+  text-align: center;
   color: #6c68ac;
 }
 
@@ -307,6 +306,12 @@ width: 100%;
   margin-left: 10%;
   margin-top: 6%;
   /* margin: 6vw; */
+}
+.text_box p {
+  line-height: 1.6em;
+  font-size: 1.6vw;
+  margin-right: 1.5vw;
+  text-align: justify;
 }
 .empresas_list_section{
   width: 30vw;
