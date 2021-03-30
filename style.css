@@ -316,6 +316,11 @@ width: 100%;
   font-weight: bold;
 }
 
+.exp_text_section{
+text-align: center;
+color: #6c68ac;
+font-size: 2vw;
+}
 
 /* EXP SCROLL*/
 
@@ -336,7 +341,9 @@ width: 100%;
   border-radius: 1.5vw;
   background: #6c68ac;
 }
-
+.empresas_list p {
+  text-align: justify;
+}
 
 /* FOOTER */
 .footer_main {
