@@ -22,16 +22,29 @@ const textBoxp = document.querySelectorAll('.text_box p');
 // CAPTURA ELEMENTOS  - EMPRESAS LADO DIREITO - SECTION
 const sectionPtext = document.getElementsByName('textBoxHide');
 
-// CAPTURA ELEMENTOS JQUERY - ICONE HOME
+// CAPTURA ELEMENTOS  - ICONE HOME
 const iconMove = document.getElementsByName('iconeHome')
 
-const bioPage = document.getElementById('bio_id');
+// CAPTURA ELEMENTOS  - SETORES DA PAGINA
+const pages = document.getElementById('body');
+
+const menuItens = document.querySelectorAll('.main_menu a'); //0-bio, 1-xp, 2-formação, 3-jobs, 4-contato
+
+// CAPTURA ELEMENTOS  - ICONES SOCIALMEDIA
+const iconsSocialMedia = document.querySelectorAll('div.icons_social_media img');
 
 // ---------------------------------------||--------------------------------------
 
 // SCROLLING
 
-iconMove[0].addEventListener('click', function() { bioPage.scrollIntoView({ behavior: "smooth" }) });
+//iconMove[0].addEventListener('click', function() { bioPage.scrollIntoView({ behavior: "smooth" }) });
+
+
+// CARREGAMENTO MENU
+function scrolarMenu(page) {
+    page.scrollIntoView({ behavior: "smooth" })
+}
+
 
 
 // ANIMAÇÃO ICONES
@@ -47,6 +60,16 @@ for (let i = 0; i < image.length; i++) {
         }) // FUNÇÃO FIM
 }
 
+// ANIMAÇÃO ICONES SOCIAL MEDIA
+
+for (let element of iconsSocialMedia) {
+    element.addEventListener('mouseover', function(event) {
+        event.target.style.width = '4vw'
+    })
+    element.addEventListener('mouseleave', function(event) {
+        event.target.style.width = ''
+    })
+}
 
 // RECOLHE TEXTOS EXIBIDOS
 
@@ -101,9 +124,4 @@ for (let i = 0; i <= sectionPtext.length; i++) {
             sectionPtext[i].style.display = 'none'
         }
     }
-}
-
-for (var el of sectionPtext) {
-
-    console.log(this.el)
 }
