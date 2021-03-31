@@ -2,30 +2,36 @@
 
 
 // CAPTURA ELEMENTOS DA DIV - EMPRESAS LADO ESQUERDO - TODA A DIV
-var sectionDivs = document.getElementsByName('divClick');
-
+const sectionDivs = document.getElementsByName('divClick');
 
 // CAPTURA ELEMENTOS DA DIV  - EMPRESAS LADO ESQUERDO - TEXTOS
-var sectionEmpresasText = document.getElementsByName('section_text');
+const sectionEmpresasText = document.getElementsByName('section_text');
 
 // CAPTURA ELEMENTOS SPAN - EMPRESAS LADO ESQUERDO - SPAN
 const classRotate = document.getElementsByClassName('section_rotate');
 
 // CAPTURA - EMPRESAS LADO ESQUERDO - ICONES
-let image = document.getElementsByName('imagem');
+const image = document.getElementsByName('imagem');
 
 // ---------------------------------------||--------------------------------------
 
 
 // CAPTURA ELEMENTOS DA TEXTBOX - DESCRIÇÃO DE AFAZERES -- PARAGRAFO
-var textBoxp = document.querySelectorAll('.text_box p');
+const textBoxp = document.querySelectorAll('.text_box p');
 
 // CAPTURA ELEMENTOS  - EMPRESAS LADO DIREITO - SECTION
-var sectionPtext = document.getElementsByName('textBoxHide');
+const sectionPtext = document.getElementsByName('textBoxHide');
 
+// CAPTURA ELEMENTOS JQUERY - ICONE HOME
+const iconMove = document.getElementsByName('iconeHome')
 
+const bioPage = document.getElementById('bio_id');
 
 // ---------------------------------------||--------------------------------------
+
+// SCROLLING
+
+iconMove[0].addEventListener('click', function() { bioPage.scrollIntoView({ behavior: "smooth" }) });
 
 
 // ANIMAÇÃO ICONES
@@ -40,6 +46,7 @@ for (let i = 0; i < image.length; i++) {
             }
         }) // FUNÇÃO FIM
 }
+
 
 // RECOLHE TEXTOS EXIBIDOS
 
@@ -64,7 +71,6 @@ function showText(event) {
     const section = event.querySelectorAll('section');
     if (section[1].style.display === 'none') {
         section[1].style.display = 'block';
-
     } else {
         section[1].style.display = 'none';
     };
@@ -79,18 +85,25 @@ function showText(event) {
         // timing options
         duration: 200,
         iterations: 1,
-
     });
-
 }
 
-function rec(a) {
 
-    for (let i = 0; i <= a.length; i++) {
+// MOSTRA TEXTOS SELECIONADOS NO CAMPO ONCLICK
 
-        if (a[i].style.display === 'block') {
-            a[i].style.display = 'none';
+
+for (let i = 0; i <= sectionPtext.length; i++) {
+
+    sectionDivs[i].onclick = function() {
+        if (sectionPtext[i].style.display === 'none') {
+            sectionPtext[i].style.display = 'block'
+        } else {
+            sectionPtext[i].style.display = 'none'
         }
-        console.log(a);
     }
+}
+
+for (var el of sectionPtext) {
+
+    console.log(this.el)
 }
