@@ -1,15 +1,33 @@
 @keyframes icone {
-  from {
-    
-    top: 0px;
-  }
-  to {
-   
-    top: 20px;
-  }
+    from {
+        top: 0px;
+    }
+    to {
+        top: 20px;
+    }
 }
 
-.animation_section{
-  align-self: center;
-  text-align: center;
+.animation_section {
+    align-self: center;
+    text-align: center;
+}
+
+[data-anime] {
+    opacity: 0;
+    transition: .4s;
+}
+
+[data-anime].animate {
+    opacity: 1;
+    transform: translate3d(0px, 0px, 0px);
+}
+
+[data-anime='right'] {
+    opacity: 0;
+    transform: translate3d(-20px, 0px, 0px);
+}
+
+[data-anime='left'] {
+    opacity: 0;
+    transform: translate3d(20px, 0, 0);
 }

@@ -196,6 +196,33 @@ a:hover {
     transition: 0.2s;
 }
 
+[data-anime] {
+    opacity: 0;
+    transition: .4s;
+}
+
+[data-anime].animate {
+    opacity: 1;
+    transform: translate3d(0px, 0px, 0px);
+}
+
+[data-anime='right'] {
+    opacity: 0;
+    transform: translate3d(-20px, 0px, 0px);
+}
+
+[data-anime='left'] {
+    opacity: 0;
+    transform: translate3d(20px, 0, 0);
+}
+
+.icon_5 {
+    display: flex;
+    text-align: center;
+    color: #6c68ac;
+    font-size: 2vw;
+}
+
 
 /* 
 <!-- APRESENTAÇÃO FIM --> */
@@ -373,12 +400,6 @@ a:hover {
 .text_box h1 {
     font-size: 3vw;
     font-weight: bold;
-}
-
-.exp_text_section {
-    text-align: center;
-    color: #6c68ac;
-    font-size: 2vw;
 }
 
 

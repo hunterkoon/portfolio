@@ -33,14 +33,50 @@ const menuItens = document.querySelectorAll('.main_menu a'); //0-bio, 1-xp, 2-fo
 // CAPTURA ELEMENTOS  - ICONES SOCIALMEDIA
 const iconsSocialMedia = document.querySelectorAll('div.icons_social_media img');
 
+const target = document.querySelectorAll('[data-anime]');
+const animationClass = 'animate';
 // ---------------------------------------||--------------------------------------
 
 // SCROLLING
 
-//iconMove[0].addEventListener('click', function() { bioPage.scrollIntoView({ behavior: "smooth" }) });
+const debounce = function(func, wait, immediate) {
+    let timeout;
+    return function(...args) {
+        const context = this;
+        const later = function() {
+            timeout = null;
+            if (!immediate) func.apply(context, args);
+        };
+        const callNow = immediate && !timeout;
+        clearTimeout(timeout);
+        timeout = setTimeout(later, wait);
+        if (callNow) func.apply(context, args);
+    };
+};
+
+
+function animeScroll() {
+    const windowTop = window.pageYOffset + ((window.innerHeight * 3) / 4);;
+    target.forEach(function(element) {
+        if ((windowTop) > element.offsetTop) {
+            element.classList.add(animationClass);
+        } else {
+            element.classList.remove(animationClass);
+        }
+    })
+}
+
+animeScroll();
+
+if (target.length) {
+    window.addEventListener('scroll', debounce(function() {
+        animeScroll();
+    }, 60));
+}
 
 
 // CARREGAMENTO MENU
+
 function scrolarMenu(page) {
     page.scrollIntoView({ behavior: "smooth" })
 }
