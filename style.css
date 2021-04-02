@@ -196,26 +196,6 @@ a:hover {
     transition: 0.2s;
 }
 
-[data-anime] {
-    opacity: 0;
-    transition: .4s;
-}
-
-[data-anime].animate {
-    opacity: 1;
-    transform: translate3d(0px, 0px, 0px);
-}
-
-[data-anime='right'] {
-    opacity: 0;
-    transform: translate3d(-20px, 0px, 0px);
-}
-
-[data-anime='left'] {
-    opacity: 0;
-    transform: translate3d(20px, 0, 0);
-}
-
 .icon_5 {
     display: flex;
     text-align: center;
@@ -303,6 +283,23 @@ a:hover {
 }
 
 .bio ::-webkit-scrollbar-thumb {
+    width: 50%;
+    border-radius: 1.5vw;
+    background: #6c68ac;
+}
+
+html ::-webkit-scrollbar-track {
+    background-color: #b4a6d1;
+}
+
+html ::-webkit-scrollbar {
+    height: 100px;
+    padding-top: 10%;
+    width: 0.8vw;
+    background: #6c68ac;
+}
+
+html ::-webkit-scrollbar-thumb {
     width: 50%;
     border-radius: 1.5vw;
     background: #6c68ac;
@@ -428,6 +425,10 @@ a:hover {
 
 .empresas_list p {
     text-align: justify;
+}
+
+.container {
+    background-color: #6c68ac;
 }
 
 

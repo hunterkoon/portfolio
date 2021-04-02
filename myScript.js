@@ -26,18 +26,72 @@ const sectionPtext = document.getElementsByName('textBoxHide');
 const iconMove = document.getElementsByName('iconeHome')
 
 // CAPTURA ELEMENTOS  - SETORES DA PAGINA
-const pages = document.getElementById('body');
-
 const menuItens = document.querySelectorAll('.main_menu a'); //0-bio, 1-xp, 2-formação, 3-jobs, 4-contato
+const pages = document.querySelectorAll('[data-container]');
+
 
 // CAPTURA ELEMENTOS  - ICONES SOCIALMEDIA
-const iconsSocialMedia = document.querySelectorAll('div.icons_social_media img');
 
+const iconsSocialMedia = document.querySelectorAll('div.icons_social_media img');
 const target = document.querySelectorAll('[data-anime]');
 const animationClass = 'animate';
+
+
 // ---------------------------------------||--------------------------------------
 
-// SCROLLING
+
+// CARREGAMENTO MENU
+
+function scrolarMenu(obj) {
+    obj.scrollIntoView({ behavior: "smooth" })
+}
+
+for (let element of menuItens) {
+
+    let objeto = element.firstChild.nodeValue
+
+    element.addEventListener('click', function() {
+
+        for (let pagina of pages) {
+
+            if (objeto != undefined) {
+
+                console.log(pagina)
+            }
+
+
+        }
+
+        // if (objeto === '- bio') {
+
+        //     scrolarMenu(pages[1])
+        // }
+        // if (objeto === '- experiencia') {
+
+        //     scrolarMenu(pages[2])
+        // }
+        // if (objeto === '- formação') {
+
+        //     scrolarMenu(pages[3])
+        // }
+        // if (objeto === '- trabalhos') {
+
+        //     scrolarMenu(pages[4])
+        // }
+        // if (objeto === '- contato') {
+        //     scrolarMenu(pages[5])
+        // } else {
+
+        //     console.log(objeto)
+
+        // }
+    })
+}
+
+
+
+
+// SCROLLING ANIMATION
 
 const debounce = function(func, wait, immediate) {
     let timeout;
@@ -74,12 +128,8 @@ if (target.length) {
     }, 60));
 }
 
+// SCROLLING ANIMATION - END
 
-// CARREGAMENTO MENU
-
-function scrolarMenu(page) {
-    page.scrollIntoView({ behavior: "smooth" })
-}
 
 
 
