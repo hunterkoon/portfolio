@@ -1,9 +1,6 @@
 // INICIALIZA VARIAVEIS 
 
 
-// CAPTURA ELEMENTOS DA DIV - EMPRESAS LADO ESQUERDO - TODA A DIV
-const sectionDivs = document.getElementsByName('divClick');
-
 // CAPTURA ELEMENTOS DA DIV  - EMPRESAS LADO ESQUERDO - TEXTOS
 const sectionEmpresasText = document.getElementsByName('section_text');
 
@@ -19,28 +16,19 @@ const image = document.getElementsByName('imagem');
 // CAPTURA ELEMENTOS DA TEXTBOX - DESCRIÇÃO DE AFAZERES -- PARAGRAFO
 const textBoxp = document.querySelectorAll('.text_box p');
 
-// CAPTURA ELEMENTOS  - EMPRESAS LADO DIREITO - SECTION
-const sectionPtext = document.getElementsByName('textBoxHide');
-
 // CAPTURA ELEMENTOS  - ICONE HOME
 const iconMove = document.getElementsByName('iconeHome')
 
-// CAPTURA ELEMENTOS  - SETORES DA PAGINA
-const menuItens = document.querySelectorAll('.main_menu a'); //0-bio, 1-xp, 2-formação, 3-jobs, 4-contato
-const pages = document.querySelectorAll('[data-container]');
-
-
 // CAPTURA ELEMENTOS  - ICONES SOCIALMEDIA
-
 const iconsSocialMedia = document.querySelectorAll('div.icons_social_media img');
-const target = document.querySelectorAll('[data-anime]');
-const animationClass = 'animate';
-
 
 // ---------------------------------------||--------------------------------------
 
 
 // CARREGAMENTO MENU
+// CAPTURA ELEMENTOS  - SETORES DA PAGINA
+const menuItens = document.querySelectorAll('.main_menu a');
+const pages = document.querySelectorAll('[data-container]');
 
 function scrolarMenu(obj) {
     obj.scrollIntoView({ behavior: "smooth" })
@@ -52,46 +40,37 @@ for (let element of menuItens) {
 
     element.addEventListener('click', function() {
 
-        for (let pagina of pages) {
+        if (objeto === '- bio') {
 
-            if (objeto != undefined) {
+            scrolarMenu(pages[1])
+        }
+        if (objeto === '- experiencia') {
 
-                console.log(pagina)
-            }
+            scrolarMenu(pages[2])
+        }
+        if (objeto === '- formação') {
 
+            scrolarMenu(pages[3])
+        }
+        if (objeto === '- trabalhos') {
+
+            scrolarMenu(pages[4])
+        }
+        if (objeto === '- contato') {
+            scrolarMenu(pages[5])
+        } else {
+
+            console.log(objeto)
 
         }
-
-        // if (objeto === '- bio') {
-
-        //     scrolarMenu(pages[1])
-        // }
-        // if (objeto === '- experiencia') {
-
-        //     scrolarMenu(pages[2])
-        // }
-        // if (objeto === '- formação') {
-
-        //     scrolarMenu(pages[3])
-        // }
-        // if (objeto === '- trabalhos') {
-
-        //     scrolarMenu(pages[4])
-        // }
-        // if (objeto === '- contato') {
-        //     scrolarMenu(pages[5])
-        // } else {
-
-        //     console.log(objeto)
-
-        // }
     })
 }
 
-
-
+const target = document.querySelectorAll('[data-anime]');
+const animationClass = 'animate';
 
 // SCROLLING ANIMATION
+// debounce code web;
 
 const debounce = function(func, wait, immediate) {
     let timeout;
@@ -128,10 +107,6 @@ if (target.length) {
     }, 60));
 }
 
-// SCROLLING ANIMATION - END
-
-
-
 
 // ANIMAÇÃO ICONES
 
@@ -151,40 +126,17 @@ for (let i = 0; i < image.length; i++) {
 for (let element of iconsSocialMedia) {
     element.addEventListener('mouseover', function(event) {
         event.target.style.width = '4vw'
+        event.target.style.width = '4vw'
     })
     element.addEventListener('mouseleave', function(event) {
         event.target.style.width = ''
     })
 }
 
-// RECOLHE TEXTOS EXIBIDOS
-
-function recolher() {
-
-    var listseq = document.querySelectorAll('section');
-    const sequeCheck = [listseq[5], listseq[7], listseq[9], listseq[11]];
-
-    for (let i = 0; i < 4; i++) {
-
-        if (sequeCheck[i].style.display === 'block') {
-            sequeCheck[i].style.display = 'none';
-        }
-        console.log(sequeCheck[i]);
-    }
-}
-
 // MOSTRA TEXTOS SELECIONADOS
 
-function showText(event) {
-
+function RotateButton(event) {
     const section = event.querySelectorAll('section');
-    if (section[1].style.display === 'none') {
-        section[1].style.display = 'block';
-    } else {
-        section[1].style.display = 'none';
-    };
-
-    //Animação 
 
     section[0].animate([
         // keyframes
@@ -199,15 +151,54 @@ function showText(event) {
 
 
 // MOSTRA TEXTOS SELECIONADOS NO CAMPO ONCLICK
+const sectionPtext = document.querySelectorAll('[name = textBoxHide]');
+// CAPTURA ELEMENTOS DA DIV - EMPRESAS LADO ESQUERDO - TODA A DIV
+const sectionDivs = document.querySelectorAll('[name = divClick]');
 
 
-for (let i = 0; i <= sectionPtext.length; i++) {
+// FUNÇÃO RECOLHE TODOS OS TEXTOS DENTRO DE UM FOR OF DENTRO DE UM EVENTLISTENER.
 
-    sectionDivs[i].onclick = function() {
-        if (sectionPtext[i].style.display === 'none') {
-            sectionPtext[i].style.display = 'block'
-        } else {
-            sectionPtext[i].style.display = 'none'
-        }
+const hideAll = () => {
+
+    const sectionDivsAllP = document.querySelectorAll('[name = section_names]')[0].querySelectorAll('p');
+    for (let obj of sectionDivsAllP) {
+
+        obj.style.display = 'none';
     }
+
+}
+
+// FUNÇÃO EXIBE TEXTO CASO O MESMO ESTEJA EM ESTADO OCULTO.
+
+function mostrar(obj) {
+
+    if (obj.style.display === 'none') {
+        obj.style.display = 'block',
+            console.log(obj);
+    } else {
+
+        obj.style.display = 'none';
+        console.log(obj);
+    }
+
+}
+
+// FUNÇÃO RECOLHE TODOS OS TEXTOS DENTRO DE UM FOR OF.
+
+const recolher = (obj) => {
+    obj.style.display = 'none';
+}
+
+// RECOLHE TAGS 'P' E DEPOIS QUE CLICADO EXIBE;
+
+for (let abs of sectionDivs) {
+
+    let paragraph = abs.querySelector('p');
+    recolher(paragraph);
+
+    abs.addEventListener('click', () => {
+        hideAll(),
+            mostrar(paragraph);
+    })
+
 }

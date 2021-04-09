@@ -288,7 +288,8 @@ a:hover {
     background: #6c68ac;
 }
 
-html ::-webkit-scrollbar-track {
+
+/* html ::-webkit-scrollbar-track {
     background-color: #b4a6d1;
 }
 
@@ -303,7 +304,7 @@ html ::-webkit-scrollbar-thumb {
     width: 50%;
     border-radius: 1.5vw;
     background: #6c68ac;
-}
+} */
 
 .icon_2 {
     position: relative;
@@ -336,10 +337,6 @@ html ::-webkit-scrollbar-thumb {
     width: 2.8vw;
 }
 
-.empresas_list_section {
-    display: block;
-}
-
 .empresas_list_section section {
     padding-bottom: 1vw;
     font-size: 1.5vw;
@@ -362,7 +359,6 @@ html ::-webkit-scrollbar-thumb {
 .exp_p h1 {
     font-size: 3vw;
     padding-top: 2vw;
-    padding-bottom: 1vw;
     text-align: center;
     color: #6c68ac;
 }
@@ -432,6 +428,27 @@ html ::-webkit-scrollbar-thumb {
 }
 
 
+/* [name='section_text'].unhide {
+    display: block;
+}
+
+[name='section_text'] p {
+    display: none;
+}
+
+[name='textBoxHide'] {
+    display: none;
+}
+
+[name=textBoxHide] {
+    display: none;
+}
+
+[name=textBoxHide].unhide {
+    display: block;
+} */
+
+
 /* FOOTER */
 
 .footer_main {
@@ -460,7 +477,7 @@ footer {
 footer a {
     padding: 1vw;
     padding-inline: 1.5vw;
-    font-size: 1.4vw;
+    font-size: 1.6vw;
     text-decoration: none;
     color: #6c68ac;
 }
