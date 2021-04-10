@@ -5,13 +5,12 @@
 const sectionEmpresasText = document.getElementsByName('section_text');
 
 // CAPTURA ELEMENTOS SPAN - EMPRESAS LADO ESQUERDO - SPAN
-const classRotate = document.getElementsByClassName('section_rotate');
+const classRotate = document.querySelectorAll('.section_rotate');
 
 // CAPTURA - EMPRESAS LADO ESQUERDO - ICONES
 const image = document.getElementsByName('imagem');
 
 // ---------------------------------------||--------------------------------------
-
 
 // CAPTURA ELEMENTOS DA TEXTBOX - DESCRIÇÃO DE AFAZERES -- PARAGRAFO
 const textBoxp = document.querySelectorAll('.text_box p');
@@ -22,15 +21,14 @@ const iconMove = document.getElementsByName('iconeHome')
 // CAPTURA ELEMENTOS  - ICONES SOCIALMEDIA
 const iconsSocialMedia = document.querySelectorAll('div.icons_social_media img');
 
-
 // MOSTRA TEXTOS SELECIONADOS NO CAMPO ONCLICK
 const sectionPtext = document.querySelectorAll('[name = textBoxHide]');
+
 // CAPTURA ELEMENTOS DA DIV - EMPRESAS LADO ESQUERDO - TODA A DIV
 const sectionDivs = document.querySelectorAll('[name = divClick]');
 
 
 // ---------------------------------------||--------------------------------------
-
 
 // CARREGAMENTO MENU
 // CAPTURA ELEMENTOS  - SETORES DA PAGINA
@@ -41,36 +39,38 @@ function scrolarMenu(obj) {
     obj.scrollIntoView({ behavior: "smooth" })
 }
 
-for (let element of menuItens) {
+const initScrollMenu = () => {
+    for (let element of menuItens) {
 
-    let objeto = element.firstChild.nodeValue
+        let objeto = element.firstChild.nodeValue
 
-    element.addEventListener('click', function() {
+        element.addEventListener('click', function() {
 
-        if (objeto === '- bio') {
+            if (objeto === '- bio') {
 
-            scrolarMenu(pages[1])
-        }
-        if (objeto === '- experiencia') {
+                scrolarMenu(pages[1])
+            }
+            if (objeto === '- experiencia') {
 
-            scrolarMenu(pages[2])
-        }
-        if (objeto === '- formação') {
+                scrolarMenu(pages[2])
+            }
+            if (objeto === '- formação') {
 
-            scrolarMenu(pages[3])
-        }
-        if (objeto === '- trabalhos') {
+                scrolarMenu(pages[3])
+            }
+            if (objeto === '- trabalhos') {
 
-            scrolarMenu(pages[4])
-        }
-        if (objeto === '- contato') {
-            scrolarMenu(pages[5])
-        } else {
+                scrolarMenu(pages[4])
+            }
+            if (objeto === '- contato') {
+                scrolarMenu(pages[5])
+            } else {
 
-            console.log(objeto)
+                console.log(objeto)
 
-        }
-    })
+            }
+        })
+    }
 }
 
 const target = document.querySelectorAll('[data-anime]');
@@ -106,7 +106,7 @@ function animeScroll() {
     })
 }
 
-animeScroll();
+
 
 if (target.length) {
     window.addEventListener('scroll', debounce(function() {
@@ -120,12 +120,14 @@ if (target.length) {
 const animationIcon = () => {
 
     for (let i = 0; i < image.length; i++) {
+
         classRotate[i].addEventListener('click', function() {
 
-
                 if (image[i].style.transform != 'rotate(90deg)') {
+
                     image[i].style.transition = '0.5s';
                     image[i].style.transform = 'rotate(90deg)';
+
                 } else {
                     image[i].style.transform = 'rotate(0deg)';
                 }
@@ -144,28 +146,40 @@ const animationIcon = () => {
     }
 }
 
-animationIcon()
+
+
+const destrAnimation = () => {
+
+    classRotate.forEach((objeto) => {
+
+        objeto.addEventListener('click', () => {
+            for (let i = 0; i < image.length; i++) {
+                image[i].style.transform = 'rotate(0deg)';
+            }
+        })
+
+    })
+}
 
 
 // ANIMAÇÃO ICONES SOCIAL MEDIA
-
-for (let element of iconsSocialMedia) {
-    element.addEventListener('mouseover', function(event) {
-        event.target.style.width = '4vw'
-        event.target.style.width = '4vw'
-    })
-    element.addEventListener('mouseleave', function(event) {
-        event.target.style.width = ''
-    })
+const hoverSocial = () => {
+    for (let element of iconsSocialMedia) {
+        element.addEventListener('mouseover', function(event) {
+            event.target.style.width = '4vw'
+            event.target.style.width = '4vw'
+        })
+        element.addEventListener('mouseleave', function(event) {
+            event.target.style.width = ''
+        })
+    }
 }
 
 // FUNÇÃO RECOLHE TODOS OS TEXTOS DENTRO DE UM FOR OF DENTRO DE UM EVENTLISTENER.
 
-const hideAll = () => {
-
-    animationIcon()
-
+const hideAllP = () => {
     const sectionDivsAllP = document.querySelectorAll('[name = section_names]')[0].querySelectorAll('p');
+
     for (let obj of sectionDivsAllP) {
 
         obj.style.display = 'none';
@@ -173,7 +187,6 @@ const hideAll = () => {
 
 }
 
-hideAll();
 
 
 // RECOLHE TAGS 'P' E DEPOIS QUE CLICADO EXIBE;
@@ -188,19 +201,39 @@ const recolher = (obj) => {
     // RECOLHE TAGS 'P' E DEPOIS QUE CLICADO EXIBE;
 
 
+const showTextHidden = () => {
 
-for (let abs of sectionDivs) {
+    for (let abs of sectionDivs) {
 
-    let paragraph = abs.querySelector('p');
+        let paragraph = abs.querySelector('p');
 
-    abs.addEventListener('click', () => {
+        abs.addEventListener('click', () => {
 
-        if (paragraph.style.display === 'none') {
-            mostrar(paragraph)
-        } else {
-            recolher(paragraph);
-        }
+            hideAllP();
 
-    })
+            if (paragraph.style.display === 'none') {
+                mostrar(paragraph)
+            } else {
+                recolher(paragraph);
+            }
+
+        })
+    }
+}
+
+
+const init = () => {
+
+
+    initScrollMenu(),
+        hoverSocial(),
+        animeScroll(),
+        destrAnimation(),
+        animationIcon(),
+        showTextHidden();
+
+
+
 
 }
+init();

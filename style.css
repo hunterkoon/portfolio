@@ -430,13 +430,14 @@ html ::-webkit-scrollbar-thumb {
 
 /* [name='section_text'].unhide {
     display: block;
-}
+}*/
 
 [name='section_text'] p {
     display: none;
 }
 
-[name='textBoxHide'] {
+
+/* [name='textBoxHide'] {
     display: none;
 }
 
@@ -446,7 +447,7 @@ html ::-webkit-scrollbar-thumb {
 
 [name=textBoxHide].unhide {
     display: block;
-} */
+}  */
 
 
 /* FOOTER */
