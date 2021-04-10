@@ -223,29 +223,38 @@ const showTextHidden = () => {
 
 const swithCase = (a, obj) => {
 
-    const transictionText = (event) => {
+    const transictionText = () => {
+
+        let abs1 = obj[a].childNodes[1];
 
         for (let abs of obj) {
 
-            abs.scrollIntoView({ behavior: "auto" });
-
+            abs1.scrollIntoView({ behavior: "smooth", block: "center" });
         }
     }
-    transictionText();
+
 
     switch (a) {
 
         case 0:
             obj[0].style.display = 'block';
+            transictionText();
+
             break;
         case 1:
             obj[1].style.display = 'block';
+            transictionText();
+
             break;
         case 2:
             obj[2].style.display = 'block';
+            transictionText();
+
             break;
         case 3:
             obj[3].style.display = 'block';
+            transictionText();
+
             break;
 
         default:
