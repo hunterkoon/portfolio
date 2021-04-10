@@ -22,6 +22,13 @@ const iconMove = document.getElementsByName('iconeHome')
 // CAPTURA ELEMENTOS  - ICONES SOCIALMEDIA
 const iconsSocialMedia = document.querySelectorAll('div.icons_social_media img');
 
+
+// MOSTRA TEXTOS SELECIONADOS NO CAMPO ONCLICK
+const sectionPtext = document.querySelectorAll('[name = textBoxHide]');
+// CAPTURA ELEMENTOS DA DIV - EMPRESAS LADO ESQUERDO - TODA A DIV
+const sectionDivs = document.querySelectorAll('[name = divClick]');
+
+
 // ---------------------------------------||--------------------------------------
 
 
@@ -110,16 +117,35 @@ if (target.length) {
 
 // ANIMAÇÃO ICONES
 
-for (let i = 0; i < image.length; i++) {
-    classRotate[i].addEventListener('click', function() {
-            if (image[i].style.transform != 'rotate(90deg)') {
-                image[i].style.transition = '0.5s';
-                image[i].style.transform = 'rotate(90deg)';
-            } else {
-                image[i].style.transform = 'rotate(0deg)';
-            }
-        }) // FUNÇÃO FIM
+const animationIcon = () => {
+
+    for (let i = 0; i < image.length; i++) {
+        classRotate[i].addEventListener('click', function() {
+
+
+                if (image[i].style.transform != 'rotate(90deg)') {
+                    image[i].style.transition = '0.5s';
+                    image[i].style.transform = 'rotate(90deg)';
+                } else {
+                    image[i].style.transform = 'rotate(0deg)';
+                }
+
+                sectionDivs[i].animate([
+                    // keyframes
+                    { transform: 'translateY(0px)' },
+                    { transform: 'translateY(-10px)' }
+                ], {
+                    // timing options
+                    duration: 200,
+                    iterations: 1,
+                });
+
+            }) // FUNÇÃO FIM
+    }
 }
+
+animationIcon()
+
 
 // ANIMAÇÃO ICONES SOCIAL MEDIA
 
@@ -133,32 +159,11 @@ for (let element of iconsSocialMedia) {
     })
 }
 
-// MOSTRA TEXTOS SELECIONADOS
-
-function RotateButton(event) {
-    const section = event.querySelectorAll('section');
-
-    section[0].animate([
-        // keyframes
-        { transform: 'translateY(0px)' },
-        { transform: 'translateY(-10px)' }
-    ], {
-        // timing options
-        duration: 200,
-        iterations: 1,
-    });
-}
-
-
-// MOSTRA TEXTOS SELECIONADOS NO CAMPO ONCLICK
-const sectionPtext = document.querySelectorAll('[name = textBoxHide]');
-// CAPTURA ELEMENTOS DA DIV - EMPRESAS LADO ESQUERDO - TODA A DIV
-const sectionDivs = document.querySelectorAll('[name = divClick]');
-
-
 // FUNÇÃO RECOLHE TODOS OS TEXTOS DENTRO DE UM FOR OF DENTRO DE UM EVENTLISTENER.
 
 const hideAll = () => {
+
+    animationIcon()
 
     const sectionDivsAllP = document.querySelectorAll('[name = section_names]')[0].querySelectorAll('p');
     for (let obj of sectionDivsAllP) {
@@ -168,37 +173,34 @@ const hideAll = () => {
 
 }
 
-// FUNÇÃO EXIBE TEXTO CASO O MESMO ESTEJA EM ESTADO OCULTO.
+hideAll();
 
-function mostrar(obj) {
-
-    if (obj.style.display === 'none') {
-        obj.style.display = 'block',
-            console.log(obj);
-    } else {
-
-        obj.style.display = 'none';
-        console.log(obj);
-    }
-
-}
-
-// FUNÇÃO RECOLHE TODOS OS TEXTOS DENTRO DE UM FOR OF.
-
-const recolher = (obj) => {
-    obj.style.display = 'none';
-}
 
 // RECOLHE TAGS 'P' E DEPOIS QUE CLICADO EXIBE;
+
+
+const mostrar = (obj) => {
+    obj.style.display = 'block';
+}
+const recolher = (obj) => {
+        obj.style.display = 'none';
+    }
+    // RECOLHE TAGS 'P' E DEPOIS QUE CLICADO EXIBE;
+
+
 
 for (let abs of sectionDivs) {
 
     let paragraph = abs.querySelector('p');
-    recolher(paragraph);
 
     abs.addEventListener('click', () => {
-        hideAll(),
-            mostrar(paragraph);
+
+        if (paragraph.style.display === 'none') {
+            mostrar(paragraph)
+        } else {
+            recolher(paragraph);
+        }
+
     })
 
 }
