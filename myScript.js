@@ -21,12 +21,15 @@ const iconMove = document.getElementsByName('iconeHome')
 // CAPTURA ELEMENTOS  - ICONES SOCIALMEDIA
 const iconsSocialMedia = document.querySelectorAll('div.icons_social_media img');
 
-// MOSTRA TEXTOS SELECIONADOS NO CAMPO ONCLICK
-const sectionPtext = document.querySelectorAll('[name = textBoxHide]');
-
 // CAPTURA ELEMENTOS DA DIV - EMPRESAS LADO ESQUERDO - TODA A DIV
 const sectionDivs = document.querySelectorAll('[name = divClick]');
 
+// CAPTURA TEXTOS SELECIONADOS NO CAMPO ONCLICK
+const sectionPtext = document.querySelectorAll('.text_box section');
+
+
+// CAPTURA TEXTOS SELECIONADOS NO CAMPO ONCLICK DIV P EXPERIENCIAS
+const sectionDivsAllP = document.querySelectorAll('[name = section_names]')[0].querySelectorAll('p');
 
 // ---------------------------------------||--------------------------------------
 
@@ -148,6 +151,8 @@ const animationIcon = () => {
 
 
 
+// INVERTE ANIMAÇÃO DOS ICONES
+
 const destrAnimation = () => {
 
     classRotate.forEach((objeto) => {
@@ -162,7 +167,9 @@ const destrAnimation = () => {
 }
 
 
+
 // ANIMAÇÃO ICONES SOCIAL MEDIA
+
 const hoverSocial = () => {
     for (let element of iconsSocialMedia) {
         element.addEventListener('mouseover', function(event) {
@@ -177,28 +184,18 @@ const hoverSocial = () => {
 
 // FUNÇÃO RECOLHE TODOS OS TEXTOS DENTRO DE UM FOR OF DENTRO DE UM EVENTLISTENER.
 
-const hideAllP = () => {
-    const sectionDivsAllP = document.querySelectorAll('[name = section_names]')[0].querySelectorAll('p');
 
-    for (let obj of sectionDivsAllP) {
+const hideAllP = (element) => {
+
+    for (let obj of element) {
 
         obj.style.display = 'none';
     }
 
 }
-
 
 
 // RECOLHE TAGS 'P' E DEPOIS QUE CLICADO EXIBE;
-
-
-const mostrar = (obj) => {
-    obj.style.display = 'block';
-}
-const recolher = (obj) => {
-        obj.style.display = 'none';
-    }
-    // RECOLHE TAGS 'P' E DEPOIS QUE CLICADO EXIBE;
 
 
 const showTextHidden = () => {
@@ -209,17 +206,78 @@ const showTextHidden = () => {
 
         abs.addEventListener('click', () => {
 
-            hideAllP();
+            hideAllP(sectionDivsAllP);
 
             if (paragraph.style.display === 'none') {
-                mostrar(paragraph)
+
+                paragraph.style.display = 'block';
+
             } else {
-                recolher(paragraph);
+                paragraph.style.display = 'none';;
             }
 
         })
     }
 }
+
+
+const swithCase = (a, obj) => {
+
+    const transictionText = (event) => {
+
+        for (let abs of obj) {
+
+            abs.scrollIntoView({ behavior: "auto" });
+
+        }
+    }
+    transictionText();
+
+    switch (a) {
+
+        case 0:
+            obj[0].style.display = 'block';
+            break;
+        case 1:
+            obj[1].style.display = 'block';
+            break;
+        case 2:
+            obj[2].style.display = 'block';
+            break;
+        case 3:
+            obj[3].style.display = 'block';
+            break;
+
+        default:
+            alert('Alguma coisa Errada!');
+
+    }
+}
+
+const hideTextRight = (leftPanel, rightPanel) => {
+
+    leftPanel.forEach((item, index) => {
+        item.addEventListener('click', () => {
+
+            hideAllP(rightPanel);
+        })
+    })
+}
+
+const unhideTextRight = (leftPanel, rightPanel) => {
+
+    leftPanel.forEach((item, index) => {
+        item.addEventListener('click', () => {
+            swithCase(index, rightPanel)
+
+        })
+    })
+}
+
+
+// lado ESQUERDO
+
+
 
 
 const init = () => {
@@ -230,10 +288,9 @@ const init = () => {
         animeScroll(),
         destrAnimation(),
         animationIcon(),
-        showTextHidden();
-
-
-
+        showTextHidden(),
+        hideTextRight(sectionDivs, sectionPtext),
+        unhideTextRight(sectionDivs, sectionPtext);
 
 }
 init();

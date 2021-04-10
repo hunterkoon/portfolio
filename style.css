@@ -436,11 +436,12 @@ html ::-webkit-scrollbar-thumb {
     display: none;
 }
 
-
-/* [name='textBoxHide'] {
+[name='textBoxHide'] {
     display: none;
 }
 
+
+/*
 [name=textBoxHide] {
     display: none;
 }
