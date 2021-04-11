@@ -27,6 +27,11 @@ const sectionDivs = document.querySelectorAll('[name = divClick]');
 // CAPTURA TEXTOS SELECIONADOS NO CAMPO ONCLICK
 const sectionPtext = document.querySelectorAll('.text_box section');
 
+// CAPTURA DIV BIO
+const bioId = document.getElementById('bio_id');
+// CAPTURA DIV EXP
+const expId = document.getElementById('exp_id');
+
 
 // CAPTURA TEXTOS SELECIONADOS NO CAMPO ONCLICK DIV P EXPERIENCIAS
 const sectionDivsAllP = document.querySelectorAll('[name = section_names]')[0].querySelectorAll('p');
@@ -39,7 +44,7 @@ const menuItens = document.querySelectorAll('.main_menu a');
 const pages = document.querySelectorAll('[data-container]');
 
 function scrolarMenu(obj) {
-    obj.scrollIntoView({ behavior: "smooth" })
+    obj.scrollIntoView({ behavior: "smooth", block: 'start' })
 }
 
 const initScrollMenu = () => {
@@ -223,7 +228,9 @@ const showTextHidden = () => {
 
 const swithCase = (a, obj) => {
 
+
     const transictionText = () => {
+
 
         for (let abs of obj) {
 
@@ -279,23 +286,24 @@ const unhideTextRight = (leftPanel, rightPanel) => {
     leftPanel.forEach((item, index) => {
         item.addEventListener('click', () => {
 
+            scrolarMenu(leftPanel[index]);
             swithCase(index, rightPanel);
 
         })
     })
 }
-unhideTextRight(sectionDivs, sectionPtext);
 
 // INICIALIZAÇÃO DE FUNÇÃO
 const init = () => {
 
 
-    initScrollMenu(),
-        hoverSocial(),
-        animeScroll(),
-        destrAnimation(),
-        animationIcon(),
-        showTextHidden();
+    unhideTextRight(sectionDivs, sectionPtext);
+    initScrollMenu();
+    hoverSocial();
+    animeScroll();
+    destrAnimation();
+    animationIcon();
+    showTextHidden();
 
 }
 init();

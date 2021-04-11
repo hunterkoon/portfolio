@@ -29,22 +29,46 @@
 
 <!-- MENU SUPERIOR -->
 
+
 <body>
 
     <div class="menu">
-        <menu class="main_menu" id="mainMenu">
+        <span class="main_menu" id="mainMenu">
             <a href="#bio">- bio</a>
             <a href="#xp">- experiencia</a>
             <a href="#formacao">- formação</a>
             <a href="#jobs">- trabalhos</a>
             <a href="#contato">- contato</a>
-        </menu>
+        </span>
 
-        <menu class="language_menu">
+        <span class="language_menu">
             <a href="index.html" style="text-decoration: underline;">pt. </a>
             <a href="index_en.html">en.</a>
-        </menu>
+        </span>
     </div>
+
+    <!-- <div class="menu_hamburger">
+        <menu>
+            <div class="hamburguer">
+                <span>
+                </span>
+
+                <span>
+                </span>
+
+                <span>
+                </span>
+            </div> 
+    <ul>
+        <li><a href="#bio">- bio</a></li>
+        <li><a href="#bio">- experiencia</a></li>
+        <li><a href="#bio">- formação</a></li>
+        <li><a href="#bio">- trabalhos</a></li>
+        <li><a href="#bio">- contato</a></li>
+    </ul>
+    </menu>
+    </div>-->
+
 
     <!-- APRESENTAÇÃO -->
 
@@ -65,7 +89,7 @@
                     <p>
                         Me chamo Gabriel Campos,<br> tenho 26 anos e atuo a mais<br> de 10 anos com Design.
                     </p>
-                    <img class='icon_1' src="bg/SVG/SVG/animed_button.svg" alt="" name='iconeHome'>
+                    <img onclick="scrolarMenu(bioId)" class='icon_1' src="bg/SVG/SVG/animed_button.svg" alt="" name='iconeHome'>
 
                 </div>
 
@@ -162,8 +186,11 @@
         </div>
 
     </container>
+    <div style="text-align: center;">
 
-    <a href="#" class="icon_1_bio"><img class="icon_1" src="bg/SVG/SVG/animate_button_2.svg" alt=""></a>
+        <img style="padding:0;" class="icon_1" src="bg/SVG/SVG/animate_button_2.svg" alt="" onclick="scrolarMenu(expId)">
+
+    </div>
 
     <container data-container='experiencia'>
         <section class="experiencia_all">
@@ -173,13 +200,7 @@
             </div>
             <div id="exp_id" class="experience">
 
-
-
-
-
                 <!-- NOME E LINKS /-->
-
-
 
 
                 <div class="empresas_list" data-anime='left'>
