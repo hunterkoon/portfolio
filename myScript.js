@@ -225,11 +225,9 @@ const swithCase = (a, obj) => {
 
     const transictionText = () => {
 
-        let abs1 = obj[a].childNodes[1];
-
         for (let abs of obj) {
 
-            abs1.scrollIntoView({ behavior: "smooth", block: "center" });
+            abs.childNodes[1].scrollIntoView({ behavior: "smooth", block: "center" });
         }
     }
 
@@ -263,32 +261,32 @@ const swithCase = (a, obj) => {
     }
 }
 
+// ESCONDE TEXTO DO PAINEL DIREITO
 const hideTextRight = (leftPanel, rightPanel) => {
 
     leftPanel.forEach((item, index) => {
         item.addEventListener('click', () => {
-
             hideAllP(rightPanel);
         })
     })
 }
 
+// MOSTRA TEXTO DO PAINEL DIREITO
 const unhideTextRight = (leftPanel, rightPanel) => {
+
+    hideTextRight(sectionDivs, sectionPtext);
 
     leftPanel.forEach((item, index) => {
         item.addEventListener('click', () => {
-            swithCase(index, rightPanel)
+
+            swithCase(index, rightPanel);
 
         })
     })
 }
+unhideTextRight(sectionDivs, sectionPtext);
 
-
-// lado ESQUERDO
-
-
-
-
+// INICIALIZAÇÃO DE FUNÇÃO
 const init = () => {
 
 
@@ -297,9 +295,7 @@ const init = () => {
         animeScroll(),
         destrAnimation(),
         animationIcon(),
-        showTextHidden(),
-        hideTextRight(sectionDivs, sectionPtext),
-        unhideTextRight(sectionDivs, sectionPtext);
+        showTextHidden();
 
 }
 init();
