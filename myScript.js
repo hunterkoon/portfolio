@@ -40,6 +40,7 @@ const sectionDivsAllP = document.querySelectorAll('[name = section_names]')[0].q
 
 // CARREGAMENTO MENU
 // CAPTURA ELEMENTOS  - SETORES DA PAGINA
+const menuItensFlu = document.querySelectorAll('.burguer-menu a');
 const menuItens = document.querySelectorAll('.main_menu a');
 const pages = document.querySelectorAll('[data-container]');
 
@@ -47,31 +48,36 @@ function scrolarMenu(obj) {
     obj.scrollIntoView({ behavior: "smooth", block: 'start' })
 }
 
-const initScrollMenu = () => {
-    for (let element of menuItens) {
+const initScrollMenu = (itens, obj2) => {
+
+    for (let element of itens) {
 
         let objeto = element.firstChild.nodeValue
 
         element.addEventListener('click', function() {
 
+            if (objeto === '- home') {
+
+                scrolarMenu(obj2[0])
+            }
             if (objeto === '- bio') {
 
-                scrolarMenu(pages[1])
+                scrolarMenu(obj2[1])
             }
             if (objeto === '- experiencia') {
 
-                scrolarMenu(pages[2])
+                scrolarMenu(obj2[2])
             }
             if (objeto === '- formação') {
 
-                scrolarMenu(pages[3])
+                scrolarMenu(obj2[3])
             }
             if (objeto === '- trabalhos') {
 
-                scrolarMenu(pages[4])
+                scrolarMenu(obj2[4])
             }
             if (objeto === '- contato') {
-                scrolarMenu(pages[5])
+                scrolarMenu(obj2[5])
             } else {
 
                 console.log(objeto)
@@ -80,9 +86,6 @@ const initScrollMenu = () => {
         })
     }
 }
-
-const target = document.querySelectorAll('[data-anime]');
-const animationClass = 'animate';
 
 // SCROLLING ANIMATION
 // debounce code web;
@@ -101,6 +104,9 @@ const debounce = function(func, wait, immediate) {
         if (callNow) func.apply(context, args);
     };
 };
+
+const target = document.querySelectorAll('[data-anime]');
+const animationClass = 'animate';
 
 
 function animeScroll() {
@@ -296,9 +302,9 @@ const unhideTextRight = (leftPanel, rightPanel) => {
 // INICIALIZAÇÃO DE FUNÇÃO
 const init = () => {
 
-
+    initScrollMenu(menuItensFlu, pages);
+    initScrollMenu(menuItens, pages);
     unhideTextRight(sectionDivs, sectionPtext);
-    initScrollMenu();
     hoverSocial();
     animeScroll();
     destrAnimation();

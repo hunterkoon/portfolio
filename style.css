@@ -86,25 +86,6 @@ a:hover {
 }
 
 
-/* <!-- MENU FLUTUANTE --> */
-
-.hamburguer span {
-    position: absolute;
-    height: 30px;
-    width: 100px;
-    background-color: #6c68ac;
-}
-
-.hamburguer {
-    display: block;
-}
-
-.menu_hamburger {
-    margin: -20px;
-    position: fixed;
-}
-
-
 /* <!-- APRESENTAÇÃO --> */
 
 .total_container {
