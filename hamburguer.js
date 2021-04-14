@@ -68,5 +68,5 @@ mouseFunc(burguerDivs);
 const windowConst = document.querySelector('.burguer-menu');
 window.onscroll = () => {
     console.log('click'),
-        this.scrollY > 20 ? windowConst.classList.add('action') : windowConst.classList.remove('action');
+        this.scrollY > 5 ? windowConst.classList.add('action') : windowConst.classList.remove('action');
 }

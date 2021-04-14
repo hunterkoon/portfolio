@@ -125,7 +125,7 @@ function animeScroll() {
 if (target.length) {
     window.addEventListener('scroll', debounce(function() {
         animeScroll();
-    }, 60));
+    }, 30));
 }
 
 

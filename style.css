@@ -19,7 +19,7 @@ body {
     justify-content: space-between;
     padding-top: 1vw;
     padding-bottom: 1vw;
-    margin-left: 2vw;
+    margin-left: 10vw;
     margin-right: 4vw;
 }
 
@@ -28,7 +28,6 @@ body {
 }
 
 .language_menu a {
-    margin: 0;
     text-decoration: none;
     color: #6c68ac;
 }
@@ -454,3 +453,119 @@ footer a {
 
 
 /* RESPONSIVIDADE  */
+
+@media screen and (max-width: 480px) {
+    html {
+        width: auto;
+        height: 2000px;
+        margin: 0;
+        bottom: 0;
+        background-position-y: 0;
+        background-position-x: 60vw;
+        background-size: 120%;
+    }
+    .burguer-menu {
+        display: block;
+        margin: 0;
+        position: fixed;
+        z-index: 1;
+    }
+    .main_menu {
+        display: none;
+    }
+    .menu {
+        padding-left: 80vw;
+        bottom: 0;
+        top: 0;
+        margin: auto;
+    }
+    .menu a {
+        font-size: 3vw;
+    }
+    [data-name="spanBurguer"] div {
+        display: block;
+        margin-left: -100%;
+        border-radius: 5em;
+        width: 2.25em;
+        height: 1.25vh;
+        background-color: #6c68ac;
+        margin-top: 0.1em;
+    }
+    .line_container {
+        display: none;
+    }
+    .my_photo {
+        width: auto;
+        display: block;
+        text-align: center;
+    }
+    .photo {
+        padding-left: 1vw;
+        width: 364px;
+        height: 350px;
+        object-fit: cover;
+        border-radius: 170px;
+        ;
+    }
+    .total_container {
+        width: auto;
+        display: block;
+    }
+    .bioClass {
+        display: none;
+    }
+    .expClass {
+        display: none;
+    }
+    .abreviation {
+        display: block;
+    }
+    .short_description {
+        display: block;
+    }
+    .short_description p {
+        font-size: large;
+        text-align: center;
+    }
+    .my_text {
+        text-align: center;
+        padding-top: 20vw;
+        padding-left: 30vw;
+        top: 0;
+        right: 0;
+        margin: 0;
+        left: 0;
+        position: fixed;
+        width: auto;
+    }
+    .my_text h1 {
+        font-size: x-large;
+    }
+    .my_text p {
+        font-size: 4vw;
+    }
+    .icon_1 {
+        width: 7vw;
+        padding: 0;
+    }
+    .icons_social_media img {
+        width: 10vw;
+    }
+    .both {
+        height: 80px;
+    }
+    .both a {
+        display: none;
+    }
+    .both img {
+        margin-left: 10vw;
+        width: 15vw;
+        padding-right: 5vw;
+    }
+    #spanID {
+        margin-left: 5vw;
+    }
+    .wip {
+        font-size: 3vw;
+    }
+}
