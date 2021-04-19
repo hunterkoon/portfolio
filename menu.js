@@ -53,6 +53,8 @@ const mouseFunc = (param_1) => {
 };
 mouseFunc(burguerDivs);
 
+// FUNÇÃO ADAPTA MENU PARA SCROLLING.
+
 const windowBurguer = document.querySelector(".burguer-divs");
 const windowConst = document.querySelector(".burguer-menu");
 const menuConst = document.querySelector(".menu");

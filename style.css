@@ -432,6 +432,13 @@ a:hover {
   display: none;
 }
 
+/* *
+*
+*
+*
+*
+*
+* */
 /* FOOTER */
 
 .footer_main {
@@ -464,13 +471,124 @@ footer a {
   text-decoration: none;
   color: #6c68ac;
 }
+/* *
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+* */
 
+
+/* Skills */
+
+.formacao {
+  margin-top: 6vw;
+  justify-content: space-evenly;
+  display: flex;
+}
+.academica {
+  margin-left: 3vw;
+  margin-right: 1vw;
+  width: 100%;
+  /* border: .1px solid grey; */
+}
+.skills {
+  width: 100%;
+  margin-right: 3vw;
+  margin-left: 1vw;
+  /* border: 1px solid grey; */
+}
+.academica h1 {
+  color: #6c68ac;
+}
+.academica {
+  font-size: 1.3rem;
+  color: #59595b;
+}
+
+.academica h3 {
+  font-size: 1.2rem;
+  padding: 0;
+  margin: 0;
+  margin-left: .6rem;
+
+}
+.academica p {
+  font-size: 1rem;
+  padding-bottom: 1vw;
+  margin: 0;
+  margin-left: .6rem; 
+}
+.certificacao{
+  display: block;
+  margin-left: 3vw;
+  margin-right: 3vw;
+  margin-top: 1vw;
+  font-weight: bold;
+  font-style: normal;
+  color: #6c68ac;
+}
+.certificacao h1::after{
+  content: "";
+  margin-top: 1vw;
+  display: block;
+  width: 35vw;
+  height: 1.2px;
+  background-color:currentColor;
+}
+.scrumCert{
+  align-items:center;
+  margin-left: 1vw;
+  display: flex;
+}
+.scrumCert p {
+
+  margin-left: 2vw;
+
+}
+.academica_cursos {
+  margin-top: .4rem;
+}
+.academica_cursos h1{
+ font-size: 1.2em;
+
+}
+/* *
+*
+*
+*
+*
+*
+*
+*
+* */
 /* BURGUER MENU  */
 
-.burguer-menu{
+.burguer-menu {
   display: none;
 }
 
+
+
+/* *
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+* */
 @media only screen and (max-width: 800px) {
   .menu {
     display: none;
@@ -482,7 +600,7 @@ footer a {
     display: block;
     width: 100%;
   }
-  .burguer-divs{    
+  .burguer-divs {
     float: right;
   }
   .spanMenu {
@@ -490,27 +608,26 @@ footer a {
     background-color: #6c68ac;
     float: left;
   }
-  .spanMenu ul{    
+  .spanMenu ul {
     list-style-type: none;
     padding-top: 5vw;
   }
-  .spanMenu a{    
-    
+  .spanMenu a {
     text-decoration: none;
     color: #e6e7e7;
   }
-  .spanMenu li{   
-padding-top: 3vw;
+  .spanMenu li {
+    padding-top: 3vw;
   }
-  .spanMenu p{  
+  .spanMenu p {
     cursor: pointer;
     justify-content: center;
-    font-size: x-large; 
+    font-size: x-large;
     height: auto;
-    border: 1px solid #e6e7e7; 
+    border: 1px solid #e6e7e7;
     margin-right: 3vw;
     text-align: center;
-    color:#e6e7e7;
+    color: #e6e7e7;
   }
 
   .burguer-menu div {
