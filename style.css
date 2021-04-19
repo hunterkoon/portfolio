@@ -485,7 +485,6 @@ footer a {
 *
 * */
 
-
 /* Skills */
 
 .formacao {
@@ -499,12 +498,6 @@ footer a {
   width: 100%;
   /* border: .1px solid grey; */
 }
-.skills {
-  width: 100%;
-  margin-right: 3vw;
-  margin-left: 1vw;
-  /* border: 1px solid grey; */
-}
 .academica h1 {
   color: #6c68ac;
 }
@@ -517,16 +510,15 @@ footer a {
   font-size: 1.2rem;
   padding: 0;
   margin: 0;
-  margin-left: .6rem;
-
+  margin-left: 0.6rem;
 }
 .academica p {
   font-size: 1rem;
   padding-bottom: 1vw;
   margin: 0;
-  margin-left: .6rem; 
+  margin-left: 0.6rem;
 }
-.certificacao{
+.certificacao {
   display: block;
   margin-left: 3vw;
   margin-right: 3vw;
@@ -535,31 +527,73 @@ footer a {
   font-style: normal;
   color: #6c68ac;
 }
-.certificacao h1::after{
+.certificacao h1::after {
   content: "";
   margin-top: 1vw;
   display: block;
   width: 35vw;
   height: 1.2px;
-  background-color:currentColor;
+  background-color: currentColor;
 }
-.scrumCert{
-  align-items:center;
+.scrumCert {
+  align-items: center;
   margin-left: 1vw;
   display: flex;
 }
 .scrumCert p {
-
   margin-left: 2vw;
-
 }
 .academica_cursos {
-  margin-top: .4rem;
+  margin-top: 0.4rem;
 }
-.academica_cursos h1{
- font-size: 1.2em;
+.academica_cursos h1 {
+  font-size: 1.2em;
+}
+.skills {
+  text-align: center;
+  width: 100%;
+  margin-right: 3vw;
+  margin-left: 1vw;
+  border: 1px solid grey;
+}
+.barrs {
+  display: flex;
+}
+.barrs li {
+  list-style-type: none;
+  padding-top: 1vw;
+}
+.skills_left {
+  width: 50%;
+}
+.skills_right {
+  width: 50%;
+}
+.programming_skills {
+  width: 100%;
+  text-align: end;
+  border: 1px solid grey;
+}
+.programming_skills span{
+display: inline-flex;
+width: 100%;
+height: 15px;
+background-color: #6c68ac;
 
 }
+.language_skills {
+  text-align: end;
+  border: 1px solid grey;
+}
+.design_skills {
+  text-align: end;
+  border: 1px solid grey;
+}
+.soft_skills {
+  text-align: end;
+  border: 1px solid grey;
+}
+
 /* *
 *
 *
@@ -574,8 +608,6 @@ footer a {
 .burguer-menu {
   display: none;
 }
-
-
 
 /* *
 *
