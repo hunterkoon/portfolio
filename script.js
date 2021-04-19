@@ -31,6 +31,8 @@ const sectionPtext = document.querySelectorAll('.text_box section');
 const bioId = document.getElementById('bio_id');
 // CAPTURA DIV EXP
 const expId = document.getElementById('exp_id');
+// CAPTURA DIV skills
+const formId = document.getElementById('form_Id');
 
 
 // CAPTURA TEXTOS SELECIONADOS NO CAMPO ONCLICK DIV P EXPERIENCIAS
