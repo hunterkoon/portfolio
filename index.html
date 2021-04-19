@@ -5,12 +5,9 @@
     <meta charset="UTF-8">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="animations.css">
-    <link rel="stylesheet" href="burguer.css">
     <link rel="stylesheet" href="fonts.css">
     <title>Gabriel Campos - Portfólio</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <!-- Responsividade -->
 
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -28,6 +25,8 @@
 
 </head>
 
+
+
 <!-- MENU SUPERIOR -->
 
 
@@ -40,40 +39,40 @@
             <a href="#formacao">- formação</a>
             <a href="#jobs">- trabalhos</a>
             <a href="#contato">- contato</a>
-        </span>
+        </span>    
 
         <span class="language_menu">
             <a href="index.html" style="text-decoration: underline;">pt. </a>
             <a href="index_en.html">en.</a>
-        </span>
-    </div>
+        </span>    
+    </div>    
 
-    <!-- BURGUER MENU -->
+<!-- BURGUER MENU -->
 
-    <div class="burguer-menu">
+<div class="burguer-menu">
 
-        <span id='spanID' data-name="spanBurguer">
-                
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    
-            </span>
+    <span id='spanID' data-name="spanBurguer" class="burguer-divs">
+
+        <div></div>
+        <div></div>
+        <div></div>
+
+    </span>
 
 
-        <span id="spanMenuID" class="spanMenu">
-                 <ul>
-                     <li><a href="#home">- home</a></li>
-                     <li><a href="#bio">- bio</a></li>
-                     <li><a href="#experiencia">- experiencia</a></li>
-                     <li><a href="#formação">- formação</a></li>
-                     <li><a href="#trabalhos">- trabalhos</a></li>
-                     <li><a href="#contato">- contato</a></li>
-                 </ul>
-            </span>
+    <span id="spanMenuID" class="spanMenu">
+        <ul>
+            <li><a href="#home">- home</a></li>
+            <li><a href="#bio">- bio</a></li>
+            <li><a href="#experiencia">- experiencia</a></li>
+            <li><a href="#formação">- formação</a></li>
+            <li><a href="#trabalhos">- trabalhos</a></li>
+            <li><a href="#contato">- contato</a></li>
+            <p>X</p>
+        </ul>
+    </span>
 
-    </div>
-
+</div>
 
 
     <!-- APRESENTAÇÃO -->
@@ -98,36 +97,39 @@
                     <img onclick="scrolarMenu(bioId)" class='icon_1' src="bg/SVG/SVG/animed_button.svg" alt="" name='iconeHome'>
 
                 </div>
+                <div class="call_action">
 
-                <section class='line_container'>
-                    <div class="line"></div>
+                    <section class='line_container'>
+                        <div class="line"></div>
 
-                    <a class="contate" target="_blank" href="https://api.whatsapp.com/send?phone=5511939213367&text=Ol%C3%A1%2C%20estou%20entrando%20em%20contato%20por%20conta%20de%20seu%20portf%C3%B3lio!.">
+                        <a class="contate" target="_blank" href="https://api.whatsapp.com/send?phone=5511939213367&text=Ol%C3%A1%2C%20estou%20entrando%20em%20contato%20por%20conta%20de%20seu%20portf%C3%B3lio!.">
                         Fale Comigo!</a>
 
-                    <div class="line_2"></div>
+                        <div class="line_2"></div>
 
-                </section>
+                    </section>
+                </div>
+            </div>
+
+            <div class="abreviation">
+
+                <div class="short_description">
+                    <p>Desenvolvedor Front End<br> UI/UX | Web | JAVASCRIPT | PHP | MySQL | 3D SENIOR DESIGNER </p>
+                </div>
+
+
+                <div class="icons_social_media">
+
+                    <a href="https://github.com/hunterkoon" target="_blank">
+                        <img data-class='iconeSocial' class="icon_2_git" src="bg/SVG/SVG/git.svg" alt=""></a>
+                    <a href="https://www.linkedin.com/in/gabriel-campos-005166139/" target="_blank">
+                        <img data-class='iconeSocial' class="icon_2_linkedin" src="bg/SVG/SVG/linkedin.svg" alt=""> </a>
+                    <a href="https://www.behance.net/hunterkoon" target="_blank">
+                        <img data-class='iconeSocial' class="icon_2_behance" src="bg/SVG/SVG/behance.svg" alt=""> </a>
+                </div>
             </div>
         </div>
 
-        <div class="abreviation">
-
-            <div class="short_description">
-                <p>Desenvolvedor Front End<br> UI/UX | Web | JAVASCRIPT | PHP | MySQL | 3D SENIOR DESIGNER </p>
-            </div>
-
-
-            <div class="icons_social_media">
-
-                <a href="https://github.com/hunterkoon" target="_blank">
-                    <img data-class='iconeSocial' class="icon_2_git" src="bg/SVG/SVG/git.svg" alt=""></a>
-                <a href="https://www.linkedin.com/in/gabriel-campos-005166139/" target="_blank">
-                    <img data-class='iconeSocial' class="icon_2_linkedin" src="bg/SVG/SVG/linkedin.svg" alt=""> </a>
-                <a href="https://www.behance.net/hunterkoon" target="_blank">
-                    <img data-class='iconeSocial' class="icon_2_behance" src="bg/SVG/SVG/behance.svg" alt=""> </a>
-            </div>
-        </div>
 
     </container>
 
@@ -192,6 +194,8 @@
         </div>
 
     </container>
+
+
     <div style="text-align: center;">
 
         <img style="padding:0;" class="icon_1" src="bg/SVG/SVG/animate_button_2.svg" alt="" onclick="scrolarMenu(expId)">
