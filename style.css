@@ -554,14 +554,27 @@ footer a {
   width: 100%;
   margin-right: 3vw;
   margin-left: 1vw;
-  border: 1px solid grey;
+   /* border: 1px solid grey;  */
+}
+.skills h1 {
+  color: #6c68ac;
 }
 .barrs {
   display: flex;
 }
+.barrs h3 {
+  padding-top: 3vw;
+  font-weight: bold;
+  color: #59595b;
+  text-align: center;
+}
 .barrs li {
+  text-align-last: end;
+  font-weight: lighter;
+  color: #59595b;
+  margin-right: 2vw;
+  width: 50%;
   list-style-type: none;
-  padding-top: 1vw;
 }
 .skills_left {
   width: 50%;
@@ -572,26 +585,43 @@ footer a {
 .programming_skills {
   width: 100%;
   text-align: end;
-  border: 1px solid grey;
+  /* border: 1px solid grey; */
 }
-.programming_skills span{
-display: inline-flex;
-width: 100%;
-height: 15px;
-background-color: #6c68ac;
+.barrs span {
+  padding-top: 1.5vw;
+  align-items: center;
+  display: flex;
+}
+.barrs a {
+  border-radius: 10px;
+  height: 10px;
+  width: 1%;
+  background-color: #6c68ac;
+}
+.barrs a::after {
+  padding-top: 5px;
+  content: "";
+  margin-left: 9.1vw;
+  border-right: 1px solid #6c68ac;
 
 }
+
+.barrs ul {
+  padding: 0;
+  margin: 0;
+}
+
 .language_skills {
   text-align: end;
-  border: 1px solid grey;
+  /* border: 1px solid grey; */
 }
 .design_skills {
   text-align: end;
-  border: 1px solid grey;
+  /* border: 1px solid grey; */
 }
 .soft_skills {
   text-align: end;
-  border: 1px solid grey;
+  /* border: 1px solid grey; */
 }
 
 /* *
