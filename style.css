@@ -489,11 +489,11 @@ footer a {
 
 .formacao {
   margin-top: 6vw;
-  justify-content: space-evenly;
+  justify-content: space-between;
   display: flex;
 }
 .academica {
-  margin-left: 3vw;
+  margin-left: 7vw;
   margin-right: 1vw;
   width: 100%;
   /* border: .1px solid grey; */
@@ -507,20 +507,20 @@ footer a {
 }
 
 .academica h3 {
-  font-size: 1.2rem;
+  font-size: 0.8em;
   padding: 0;
   margin: 0;
   margin-left: 0.6rem;
 }
 .academica p {
-  font-size: 1rem;
-  padding-bottom: 1vw;
+  font-size: 1vw;
+  padding-bottom: 0.4em;
   margin: 0;
   margin-left: 0.6rem;
 }
 .certificacao {
   display: block;
-  margin-left: 3vw;
+  margin-left: 7vw;
   margin-right: 3vw;
   margin-top: 1vw;
   font-weight: bold;
@@ -552,7 +552,7 @@ footer a {
 .skills {
   text-align: center;
   width: 100%;
-  margin-right: 3vw;
+  margin-right: 7vw;
   margin-left: 1vw;
    /* border: 1px solid grey;  */
 }
@@ -588,7 +588,7 @@ footer a {
   /* border: 1px solid grey; */
 }
 .barrs span {
-  padding-top: 1.5vw;
+  padding-top: 1.2vw;
   align-items: center;
   display: flex;
 }
@@ -601,16 +601,20 @@ footer a {
 .barrs a::after {
   padding-top: 5px;
   content: "";
-  margin-left: 9.1vw;
+  margin-left: 8.4vw;
   border-right: 1px solid #6c68ac;
-
+}
+.barrs a::before {
+  padding-top: 6px;
+  content: "";
+  margin-left: 0vw;
+  border-right: 1px solid #6c68ac;
 }
 
 .barrs ul {
   padding: 0;
   margin: 0;
 }
-
 .language_skills {
   text-align: end;
   /* border: 1px solid grey; */
