@@ -4,7 +4,7 @@ body {
   left: 0;
   bottom: 0;
   margin: 0;
-  background-image: url(bg/SVG/background.svg);
+  background-image: url(/bg/SVG/background.svg);
   background-repeat: no-repeat;
   background-position-y: 0;
   background-position-x: 60vw;
@@ -593,6 +593,7 @@ footer a {
   display: flex;
 }
 .barrs a {
+  cursor: pointer;
   border-radius: 10px;
   height: 10px;
   width: 1%;
@@ -604,6 +605,7 @@ footer a {
   margin-left: 8.4vw;
   border-right: 1px solid #6c68ac;
 }
+
 /* .barrs a::before {
   padding-top: 6px;
   content: "";
@@ -626,6 +628,9 @@ footer a {
 .soft_skills {
   text-align: end;
   /* border: 1px solid grey; */
+}
+.leg_skills a {
+  background-color: #b4a6d1;
 }
 
 /* *
@@ -814,8 +819,9 @@ footer a {
   }
 
   .academica p {
+    
     margin-bottom: 3vw;
-    font-size: 1.3rem;
+    font-size: 0.8em;
   }
   .academica h1 {
     font-size: 2rem;
