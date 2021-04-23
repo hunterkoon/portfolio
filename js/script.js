@@ -44,7 +44,7 @@ const sectionDivsAllP = document
 
 // CARREGAMENTO MENU
 // CAPTURA ELEMENTOS  - SETORES DA PAGINA
-const menuItensFlu = document.querySelectorAll(".burguer-menu a");
+const menuItensFlu = document.querySelectorAll(".spanMenu a");
 const menuItens = document.querySelectorAll(".main_menu a");
 const pages = document.querySelectorAll("[data-container]");
 
@@ -287,10 +287,10 @@ const eventOnBars = (item) => {
     });
   }
 };
-eventOnBars(barStatus);
 
 // INICIALIZAÇÃO DE FUNÇÃO
 const init = () => {
+  eventOnBars(barStatus);
   initScrollMenu(menuItensFlu, pages);
   initScrollMenu(menuItens, pages);
   unhideTextRight(sectionDivs, sectionPtext);
