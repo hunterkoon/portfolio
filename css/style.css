@@ -121,6 +121,9 @@ a:hover {
 .photo {
   width: 96%;
 }
+.photo-mob {
+  display: none;
+}
 
 .my_photo_div {
   position: relative;
@@ -271,7 +274,7 @@ a:hover {
   overflow: auto;
   height: 400px;
 }
-.minitext{
+.minitext {
   display: none;
 }
 .bio > .title_bio {
@@ -477,14 +480,6 @@ footer a {
 *
 *
 *
-*
-*
-*
-*
-*
-*
-*
-*
 * */
 
 /* Skills */
@@ -608,13 +603,6 @@ footer a {
   border-right: 1px solid #6c68ac;
 }
 
-/* .barrs a::before {
-  padding-top: 6px;
-  content: "";
-  margin-left: 0vw;
-  border-right: 1px solid #6c68ac;
-} */
-
 .barrs ul {
   padding: 0;
   margin: 0;
@@ -663,15 +651,14 @@ footer a {
 *
 * */
 @media only screen and (max-width: 600px) {
-  html {
-    right: 0;
-    left: 0;
-    bottom: 0;
-    margin: 0;
-    background-position-y: 0;
-    background-position-x: 0vw;
-    background-size: 1vw;
+  html,
+  body {
+    background-color: #fff;
+    background-position: 1px;
+    background-size: 500%;
+    background-clip: content-box;
   }
+
   .menu {
     display: none;
   }
@@ -680,13 +667,12 @@ footer a {
     position: fixed;
     display: block;
     z-index: 9;
-    bottom: 0;
+    top: 0;
     right: 0;
     padding-left: 2vw;
     padding-right: 2vw;
     padding-top: 2vw;
     padding-bottom: 2vw;
-  
   }
 
   .spanMenu {
@@ -695,24 +681,24 @@ footer a {
     width: 100%;
     background-color: #6c68ac;
     height: 80%;
-
   }
 
   .spanMenu a {
-
     text-align: center;
-    margin: 0 auto ;
-    font-size: 2rem;
+    margin: 0 auto;
+    font-size: 1.4rem;
     height: 15%;
-    color:#e6e7e7;
+    color: #e6e7e7;
     text-decoration: none;
     display: block;
     margin-top: 1vw;
-
   }
- 
+  .spanMenu a:hover {
+    background-color: #b4a6d1;
+  }
 
   .burguer-menu div {
+    z-index: 10;
     margin-top: 0.4vw;
     border-radius: 5px;
     width: 2.25em;
@@ -723,23 +709,59 @@ footer a {
 *
 *
 *
-*
-*
-*
-*
-*
-*
-*
 * */
+  .total_container {
+    display: block;
+    width: auto;
+    object-fit: cover;
+  }
+  .my_photo_div {
+    object-fit: cover;
+    width: 100%;
+  }
+  .my_text {
+    text-align-last: center;
+    width: 100%;
+    position: relative;
+  }
+  .my_text h1 {
+    font-size: 2rem;
+    color: #6c68ac;
+  }
+  .my_text p {
+    margin: 0 auto;
+    font-size: 1.3rem;
+    color: #6c68ac;
+  }
+  .photo {
+    display: none;
+  }
+  .photo-mob {
+    margin: 0 auto;
+    margin-top: 10%;
+    position: relative;
+    display: block;
+    width: 85%;
+    border-radius: 50%;
+  }
+
   .abreviation {
     display: flex;
     flex-direction: column;
   }
   .abreviation p {
+    margin: 0 auto;
     padding-top: 1rem;
     font-weight: bold;
-    font-size: 1rem;
+    font-size: 1.3rem;
     text-align: center;
+  }
+  .abreviation p::before {
+    content: "";
+    margin-top: 10%;
+    margin-bottom: 10%;
+    display: block;
+    border-top: 1px solid #6c68ac;
   }
   .icons_social_media img {
     padding-top: 1.9em;
@@ -758,44 +780,30 @@ footer a {
     text-align-last: center;
     margin-top: 20%;
   }
-  .bio{
-   
-width: 0 auto;
+  .bio {
+    width: 0 auto;
   }
   .bio ::-webkit-scrollbar {
     height: 0;
-
-}
-  #description_about_id{
-   display:none;
   }
-  .minitext{
+  #description_about_id {
+    display: none;
+  }
+  .minitext {
     display: block;
   }
   .description_about_me {
     margin: 0 auto;
     width: auto;
   }
-  .my_photo img{
-    width: 100%;
-  }
-  .total_container{
-    width: 100%;
-    object-fit: cover;
-  }
 
-  .my_text {
-    text-align: right;
-    width:  100%;
-    font-size: 1em;
-    margin-left: 1em;
-  }
- 
   .icon_1 {
+    padding: 0;
+    margin: 0;
     width: 15%;
+    display: none;
   }
   .photos {
-    padding-top: 10%;
     display: none;
   }
   .btn_exp {
@@ -805,47 +813,65 @@ width: 0 auto;
     display: none;
   }
   .formacao {
-    display: none;
+    display: block;
   }
   .call_action {
     display: none;
   }
-  .barrs a::after {
-    content: "";
-    padding-top: 5px;
-    margin-left: 20vw;
-    border-right: 1px solid #6c68ac;
+  .skills_left {
+    width: auto;
+  }
+  .skills_right {
+    width: auto;
+  }
+  .barrs {
+    display: block;
   }
   .barrs span {
     padding-top: 4vw;
+    align-items: center;
+    display: flex;
   }
-  .barrs {
-    text-align: -webkit-center;
-    font-size: 1.2rem;
-    width: 100%;
-    display: block;
-  }
-  .barrs li {
-    margin-right: 8vw;
-    width: 36%;
-    list-style-type: none;
+  .barrs a::after {
+    padding-top: 5px;
+    content: "";
+    margin-left: 39.4vw;
+    border-right: 1px solid #6c68ac;
   }
   .academica {
-    text-align-last: right;
-    width: fit-content;
+    width: 0 auto;
+    margin: 0;
+    padding: 0;
+    text-align-last: start;
   }
-
   .academica p {
-    margin-bottom: 3vw;
-    font-size: 0.8em;
+    font-size: 1rem;
+    margin-bottom: 1em;
   }
-  .academica h1 {
-    font-size: 2rem;
+  .certificacao {
+    margin-top: 10%;
+    margin: 0 auto;
   }
-  .academica h3 {
-    font-size: 1.2rem;
+  .certificacao h1 {
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 10%;
   }
-  .skills {
-    width: auto;
+  .certificacao h1::after {
+    margin: 0 auto;
   }
+  .scrumCert {
+    margin: 0 auto;
+    margin-top: 10%;
+    display: flex;
+  }
+  .scrumCert p {
+    margin: 0 auto;
+    text-align: center;
+    width: 50%;
+}
+  .scrumCert img {
+    margin: 0 auto;
+    width: 50%;
+}
 }
