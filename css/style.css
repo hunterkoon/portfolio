@@ -824,6 +824,9 @@ footer a {
   .skills_right {
     width: auto;
   }
+  .skills{
+    margin: 0 auto;
+  }
   .barrs {
     display: block;
   }
