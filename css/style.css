@@ -476,6 +476,9 @@ footer a {
   text-decoration: none;
   color: #6c68ac;
 }
+.mini-footer {
+  display: none;
+}
 /* *
 *
 *
@@ -668,7 +671,7 @@ footer a {
     display: block;
     z-index: 9;
     top: 0;
-    right: 0;
+    left: 0;
     padding-left: 2vw;
     padding-right: 2vw;
     padding-top: 2vw;
@@ -725,6 +728,7 @@ footer a {
     position: relative;
   }
   .my_text h1 {
+    margin-top: 10vw;
     font-size: 2rem;
     color: #6c68ac;
   }
@@ -738,7 +742,7 @@ footer a {
   }
   .photo-mob {
     margin: 0 auto;
-    margin-top: 10%;
+    top: 7vw;
     position: relative;
     display: block;
     width: 85%;
@@ -775,13 +779,18 @@ footer a {
   }
   .title_bio h1 {
     font-size: xx-large;
-    text-decoration: overline 1px;
     text-align: center;
     text-align-last: center;
     margin-top: 20%;
   }
-  .bio {
-    width: 0 auto;
+  .title_bio h1::before {
+    margin: 0 auto;
+    margin-top: 13vw;
+    margin-bottom: 13vw;
+    content: "";
+    width: 250px;
+    border-top: 1px solid #6c68ac;
+    display: block;
   }
   .bio ::-webkit-scrollbar {
     height: 0;
@@ -791,10 +800,18 @@ footer a {
   }
   .minitext {
     display: block;
-  }
-  .description_about_me {
+    left: 0;
+    right: 0;
+    padding: 0;
     margin: 0 auto;
-    width: auto;
+    width: 90%;
+    height: auto;
+    font-size: 1.6rem;
+    color: #59595b;
+    text-align: justify;
+  }
+  .minitext p {
+    font-size: 2rem;
   }
 
   .icon_1 {
@@ -813,7 +830,22 @@ footer a {
     display: none;
   }
   .formacao {
+    width: 0 auto;
     display: block;
+  }
+  .faculdade::before {
+    margin: 0 auto;
+    margin-top: 13vw;
+    content: "";
+    width: 250px;
+    border-top: 1px solid #6c68ac;
+    display: block;
+  }
+  .faculdade {
+    text-align-last: center;
+    margin: 0 auto;
+    left: 0;
+    width: 100%;
   }
   .call_action {
     display: none;
@@ -824,7 +856,7 @@ footer a {
   .skills_right {
     width: auto;
   }
-  .skills{
+  .skills {
     margin: 0 auto;
   }
   .barrs {
@@ -864,17 +896,45 @@ footer a {
     margin: 0 auto;
   }
   .scrumCert {
+    width: 90%;
     margin: 0 auto;
     margin-top: 10%;
     display: flex;
   }
   .scrumCert p {
     margin: 0 auto;
-    text-align: center;
-    width: 50%;
-}
+    width: auto;
+  }
   .scrumCert img {
     margin: 0 auto;
-    width: 50%;
-}
+    width: auto;
+  }
+
+  .both {
+    display: none;
+  }
+  footer {
+    padding: 0;
+    margin: 0 auto;
+    height: auto;
+  }
+  footer a {
+    padding: 0;
+    margin: 0 auto;
+    height: auto;
+  }
+
+  .mini-footer {
+    justify-content: center;
+    display: flex;
+    width: 100%;
+  }
+
+  .mini-footer img {
+    margin-top: 2vw;
+    margin-bottom: 2vw;
+    padding-inline-start: 5vw;
+    width: 15%;
+  }
+
 }
