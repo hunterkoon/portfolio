@@ -6,9 +6,9 @@ body {
   margin: 0;
   background-image: url(/bg/SVG/background.svg);
   background-repeat: no-repeat;
-  background-position-y: 0;
-  background-position-x: 60vw;
-  background-size: 63%;
+  background-position-y: -65vw;
+  background-position-x: 38vw;
+  background-size: 100%;
 }
 
 /* HOME */
@@ -32,14 +32,6 @@ body {
 .menu a {
   font-size: 1.5vw;
 }
-/* .menu a:hover {
-  bottom: 0;
-  top: 0;
-  margin: 0;
-  transition: 0.2s;
-  background-color: #b4a6d1;
-  color: #fff;
-} */
 
 .language_menu a {
   text-decoration: none;
@@ -128,6 +120,7 @@ a:hover {
 .my_photo_div {
   position: relative;
   width: 60%;
+  margin-top: 0.2vw;
 }
 
 .my_text h1 p {
@@ -437,13 +430,6 @@ a:hover {
   display: none;
 }
 
-/* *
-*
-*
-*
-*
-*
-* */
 /* FOOTER */
 
 .footer_main {
@@ -479,14 +465,18 @@ footer a {
 .mini-footer {
   display: none;
 }
-/* *
-*
-*
-*
-* */
 
 /* Skills */
 
+.boina{
+  margin-left: 3vw;
+  opacity: 60%;
+  width: 3vw;
+}
+.boinaSpan{
+  
+  display: flex;
+}
 .formacao {
   margin-top: 6vw;
   justify-content: space-between;
@@ -531,7 +521,7 @@ footer a {
   content: "";
   margin-top: 1vw;
   display: block;
-  width: 35vw;
+  width: 30vw;
   height: 1.2px;
   background-color: currentColor;
 }
@@ -626,315 +616,6 @@ footer a {
   background-color: #b4a6d1;
 }
 
-/* *
-*
-*
-*
-*
-*
-*
-*
-* */
-/* BURGUER MENU  */
-
 .burguer-menu {
   display: none;
-}
-
-/* *
-*
-*
-*
-*
-*
-*
-*
-*
-*
-*
-* */
-@media only screen and (max-width: 600px) {
-  html,
-  body {
-    background-color: #fff;
-    background-position: 1px;
-    background-size: 500%;
-    background-clip: content-box;
-  }
-
-  .menu {
-    display: none;
-  }
-
-  .burguer-menu {
-    position: fixed;
-    display: block;
-    z-index: 9;
-    top: 0;
-    left: 0;
-    padding-left: 2vw;
-    padding-right: 2vw;
-    padding-top: 2vw;
-    padding-bottom: 2vw;
-  }
-
-  .spanMenu {
-    position: fixed;
-    z-index: 10;
-    width: 100%;
-    background-color: #6c68ac;
-    height: 80%;
-  }
-
-  .spanMenu a {
-    text-align: center;
-    margin: 0 auto;
-    font-size: 1.4rem;
-    height: 15%;
-    color: #e6e7e7;
-    text-decoration: none;
-    display: block;
-    margin-top: 1vw;
-  }
-  .spanMenu a:hover {
-    background-color: #b4a6d1;
-  }
-
-  .burguer-menu div {
-    z-index: 10;
-    margin-top: 0.4vw;
-    border-radius: 5px;
-    width: 2.25em;
-    height: 1.25vh;
-    background-color: #6c68ac;
-  }
-  /* *
-*
-*
-*
-* */
-  .total_container {
-    display: block;
-    width: auto;
-    object-fit: cover;
-  }
-  .my_photo_div {
-    object-fit: cover;
-    width: 100%;
-  }
-  .my_text {
-    text-align-last: center;
-    width: 100%;
-    position: relative;
-  }
-  .my_text h1 {
-    margin-top: 10vw;
-    font-size: 2rem;
-    color: #6c68ac;
-  }
-  .my_text p {
-    margin: 0 auto;
-    font-size: 1.3rem;
-    color: #6c68ac;
-  }
-  .photo {
-    display: none;
-  }
-  .photo-mob {
-    margin: 0 auto;
-    top: 7vw;
-    position: relative;
-    display: block;
-    width: 85%;
-    border-radius: 50%;
-  }
-
-  .abreviation {
-    display: flex;
-    flex-direction: column;
-  }
-  .abreviation p {
-    margin: 0 auto;
-    padding-top: 1rem;
-    font-weight: bold;
-    font-size: 1.3rem;
-    text-align: center;
-  }
-  .abreviation p::before {
-    content: "";
-    margin-top: 10%;
-    margin-bottom: 10%;
-    display: block;
-    border-top: 1px solid #6c68ac;
-  }
-  .icons_social_media img {
-    padding-top: 1.9em;
-    width: 4rem;
-  }
-  .bioClass {
-    display: block;
-  }
-  .title_bio {
-    width: 0 auto;
-  }
-  .title_bio h1 {
-    font-size: xx-large;
-    text-align: center;
-    text-align-last: center;
-    margin-top: 20%;
-  }
-  .title_bio h1::before {
-    margin: 0 auto;
-    margin-top: 13vw;
-    margin-bottom: 13vw;
-    content: "";
-    width: 250px;
-    border-top: 1px solid #6c68ac;
-    display: block;
-  }
-  .bio ::-webkit-scrollbar {
-    height: 0;
-  }
-  #description_about_id {
-    display: none;
-  }
-  .minitext {
-    display: block;
-    left: 0;
-    right: 0;
-    padding: 0;
-    margin: 0 auto;
-    width: 90%;
-    height: auto;
-    font-size: 1.6rem;
-    color: #59595b;
-    text-align: justify;
-  }
-  .minitext p {
-    font-size: 2rem;
-  }
-
-  .icon_1 {
-    padding: 0;
-    margin: 0;
-    width: 15%;
-    display: none;
-  }
-  .photos {
-    display: none;
-  }
-  .btn_exp {
-    display: none;
-  }
-  .expClass {
-    display: none;
-  }
-  .formacao {
-    width: 0 auto;
-    display: block;
-  }
-  .faculdade::before {
-    margin: 0 auto;
-    margin-top: 13vw;
-    content: "";
-    width: 250px;
-    border-top: 1px solid #6c68ac;
-    display: block;
-  }
-  .faculdade {
-    text-align-last: center;
-    margin: 0 auto;
-    left: 0;
-    width: 100%;
-  }
-  .call_action {
-    display: none;
-  }
-  .skills_left {
-    width: auto;
-  }
-  .skills_right {
-    width: auto;
-  }
-  .skills {
-    margin: 0 auto;
-  }
-  .barrs {
-    display: block;
-  }
-  .barrs span {
-    padding-top: 4vw;
-    align-items: center;
-    display: flex;
-  }
-  .barrs a::after {
-    padding-top: 5px;
-    content: "";
-    margin-left: 39.4vw;
-    border-right: 1px solid #6c68ac;
-  }
-  .academica {
-    width: 0 auto;
-    margin: 0;
-    padding: 0;
-    text-align-last: start;
-  }
-  .academica p {
-    font-size: 1rem;
-    margin-bottom: 1em;
-  }
-  .certificacao {
-    margin-top: 10%;
-    margin: 0 auto;
-  }
-  .certificacao h1 {
-    margin: 0 auto;
-    text-align: center;
-    margin-top: 10%;
-  }
-  .certificacao h1::after {
-    margin: 0 auto;
-  }
-  .scrumCert {
-    width: 90%;
-    margin: 0 auto;
-    margin-top: 10%;
-    display: flex;
-  }
-  .scrumCert p {
-    margin: 0 auto;
-    width: auto;
-  }
-  .scrumCert img {
-    margin: 0 auto;
-    width: auto;
-  }
-
-  .both {
-    display: none;
-  }
-  footer {
-    padding: 0;
-    margin: 0 auto;
-    height: auto;
-  }
-  footer a {
-    padding: 0;
-    margin: 0 auto;
-    height: auto;
-  }
-
-  .mini-footer {
-    justify-content: center;
-    display: flex;
-    width: 100%;
-  }
-
-  .mini-footer img {
-    margin-top: 2vw;
-    margin-bottom: 2vw;
-    padding-inline-start: 5vw;
-    width: 15%;
-  }
-
 }

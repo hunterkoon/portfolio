@@ -1,0 +1,64 @@
+@media only screen and (min-width: 1830px) {
+  .menu a {
+    font-size: 1.3rem;
+  }
+
+  :is(section) :is(p, li) {
+    font-size: 1.3rem;
+  }
+
+  .academica h3{
+      font-size: 1.6rem;
+  }
+  .academica p{
+      font-size: 1.1rem;
+      margin-top: 0.3vw;
+      margin-bottom: 0.6rem;
+  }
+  .empresas_list_section section li {
+    font-size: 2.6rem;
+  }
+  .text_box p {
+    font-size: 1.3rem;
+  }
+  .my_text {
+    font-size: 1.6rem;
+  }
+
+  .icon_1 {
+    margin-top: 3vw;
+  }
+  .line_container{
+      top: 2vw;
+  }
+  .abreviation{
+      margin-top: 0;
+      margin-left: 9vw;
+      margin-right: 7.1vw;
+
+  }
+  .bg_exp img{
+
+      width: 55vw;
+  }
+
+  .icon_4{
+      width: 2.5vw;
+  }
+.text_box{
+  line-height: 2vw;
+  color: aliceblue;
+  position: absolute;
+  overflow-y: auto;
+  width: 36vw;
+  height: 20vw;
+  margin-left: 10%;
+  margin-top: 7%;
+  /* margin: 6vw; */
+}
+
+footer a{
+    font-size: 1.3rem;
+}
+
+}
