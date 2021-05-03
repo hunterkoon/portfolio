@@ -482,15 +482,24 @@ footer a {
 }
 
 /* Skills */
+.certificadoIcon{
+  opacity: 50%;
+  padding-left: 6vw;
+  width: 6vw;
 
-.boina{
-  margin-left: 1vw;
-  opacity: 60%;
-  width: 2.3vw;
 }
-.boinaSpan{
-  
-  display: flex;
+.uni{
+  opacity: 50%;
+  padding-left: 6vw;
+  width: 6vw;  
+}
+
+.skillsIcon{
+  opacity: 50%;
+  width: 6vw;
+}
+.boinaSpan{  
+  display: block;
 }
 .formacao {
   margin-top: 6vw;
@@ -504,6 +513,7 @@ footer a {
   /* border: .1px solid grey; */
 }
 .academica h1 {
+  font-size: 2vw;
   color: #6c68ac;
 }
 .academica {
@@ -552,7 +562,7 @@ footer a {
   margin-top: 0.4rem;
 }
 .academica_cursos h1 {
-  font-size: 1.2em;
+  font-size: 2vw;
 }
 .skills {
   text-align: center;
@@ -568,7 +578,7 @@ footer a {
   display: flex;
 }
 .barrs h3 {
-  padding-top: 3vw;
+  padding-top: 1vw;
   font-weight: bold;
   color: #59595b;
   text-align: center;

@@ -28,7 +28,7 @@
     z-index: 10;
     width: 100%;
     background-color: #6c68ac;
-    height: 80%;
+    height: 100vh;
   }
 
   .spanMenu a {
@@ -228,6 +228,10 @@
     font-size: 1rem;
     margin-bottom: 1em;
   }
+  .academica h1 {
+    font-size: 2rem;
+    margin-bottom: 1em;
+  }
   .boinaSpan {
     display: block;
     align-items: center;
@@ -292,8 +296,26 @@
   }
 
   .boina {
-    margin-left: 5vw;
+    margin-left: 0vw;
     opacity: 60%;
     width: 10vw;
+  }
+
+  .certificadoIcon {
+    opacity: 50%;
+    padding-left: 0vw;
+    width: 28vw;
+  }
+  .uni {
+    padding-left: 0vw;
+    margin-top: 10vw;
+    width: 25vw;
+  }
+
+  .skillsIcon {
+    margin-top: 10vw;
+
+    opacity: 50%;
+    width: 25vw;
   }
 }
