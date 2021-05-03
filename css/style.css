@@ -28,7 +28,22 @@ body {
   padding-top: 1vw;
   padding-bottom: 1vw;
 }
-
+ .cvlink img{
+   margin: 0;
+   margin-left: 0.4vw;
+   transform: rotate(90deg);
+   width: 1vw;
+ }
+ .cvlink a{
+   margin: 0;
+   opacity: 70%;
+   transform: rotate(90deg);
+   width: 1.2vw;
+ }
+ .cvlink {
+   width: auto;
+   height: auto;
+ }
 .menu a {
   font-size: 1.5vw;
 }
@@ -469,9 +484,9 @@ footer a {
 /* Skills */
 
 .boina{
-  margin-left: 3vw;
+  margin-left: 1vw;
   opacity: 60%;
-  width: 3vw;
+  width: 2.3vw;
 }
 .boinaSpan{
   
