@@ -323,10 +323,7 @@ a:hover {
   color: #59595b;
   width: 100%;
   text-align: justify;
-  
-}
-
-
+  }
 .hobbiesDiv {
   margin-right: 3vw;
   margin-left: 3vw;
@@ -335,7 +332,6 @@ a:hover {
   justify-content: space-around;
   display: inline-flex;
 }
-
 .hobbiesDiv img {
   opacity: 50%;
   width: 7vw;
