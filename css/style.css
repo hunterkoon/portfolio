@@ -10,7 +10,11 @@ body {
   background-position-x: 38vw;
   background-size: 100%;
 }
-
+h1 {
+  margin-top: 3vw;
+  font-size: 2vw;
+  color: #6c68ac;
+}
 /* HOME */
 
 .menu.action {
@@ -28,22 +32,22 @@ body {
   padding-top: 1vw;
   padding-bottom: 1vw;
 }
- .cvlink img{
-   margin: 0;
-   margin-left: 0.4vw;
-   transform: rotate(90deg);
-   width: 1vw;
- }
- .cvlink a{
-   margin: 0;
-   opacity: 70%;
-   transform: rotate(90deg);
-   width: 1.2vw;
- }
- .cvlink {
-   width: auto;
-   height: auto;
- }
+.cvlink img {
+  margin: 0;
+  margin-left: 0.4vw;
+  transform: rotate(90deg);
+  width: 1vw;
+}
+.cvlink a {
+  margin: 0;
+  opacity: 70%;
+  transform: rotate(90deg);
+  width: 1.2vw;
+}
+.cvlink {
+  width: auto;
+  height: auto;
+}
 .menu a {
   font-size: 1.5vw;
 }
@@ -237,7 +241,7 @@ a:hover {
 /* BIO */
 
 .bio {
-  margin-top: 5vw;
+  margin-top: 8vw;
   position: relative;
 }
 
@@ -255,7 +259,7 @@ a:hover {
 
 .photos {
   margin-top: -6vw;
-  width: 35%;
+  width: 26%;
 }
 
 .photos img {
@@ -271,6 +275,10 @@ a:hover {
 
 .photo_3 {
   margin-top: -60px;
+}
+
+.my_text h1 {
+  color: #e6e7e7;
 }
 
 .description_about_me p {
@@ -296,6 +304,47 @@ a:hover {
   text-align: left;
 }
 
+.hobbiesContainer {
+  position: relative;
+  width: auto;
+  height: auto;
+  text-align: center;
+}
+.hobbiesContainer h1 {
+  margin-top: 10vw;
+}
+.hobbies{
+  
+  color: #6c68ac;
+}
+
+.hobbiesDiv p {
+  line-height: 1.5vw;
+  color: #59595b;
+  width: 100%;
+  text-align: justify;
+  
+}
+
+
+.hobbiesDiv {
+  margin-right: 3vw;
+  margin-left: 3vw;
+  margin-top: 5vw;
+  align-items: center;
+  justify-content: space-around;
+  display: inline-flex;
+}
+
+.hobbiesDiv img {
+  opacity: 50%;
+  width: 7vw;
+}
+.hobbiesDiv div {
+  margin: 1vw;
+  align-self: baseline;
+  width: 25%;
+}
 /* BIO SCROLL*/
 
 .bio ::-webkit-scrollbar-track {
@@ -401,6 +450,7 @@ a:hover {
 }
 
 .text_box h1 {
+  color: #e6e7e7;
   font-size: 3vw;
   font-weight: bold;
 }
@@ -482,23 +532,23 @@ footer a {
 }
 
 /* Skills */
-.certificadoIcon{
+.certificadoIcon {
+  margin-top: 3vw;
   opacity: 50%;
   padding-left: 6vw;
   width: 6vw;
-
 }
-.uni{
+.uni {
   opacity: 50%;
   padding-left: 6vw;
-  width: 6vw;  
+  width: 6vw;
 }
 
-.skillsIcon{
+.skillsIcon {
   opacity: 50%;
   width: 6vw;
 }
-.boinaSpan{  
+.boinaSpan {
   display: block;
 }
 .formacao {
@@ -562,6 +612,7 @@ footer a {
   margin-top: 0.4rem;
 }
 .academica_cursos h1 {
+  margin-top: 2vw;
   font-size: 2vw;
 }
 .skills {
