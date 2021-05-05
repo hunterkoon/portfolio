@@ -70,3 +70,4 @@ window.onscroll = () => {
     ? menuConst.classList.add("action")
     : menuConst.classList.remove("action");
 };
+
